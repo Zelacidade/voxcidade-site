@@ -492,7 +492,10 @@
         <div class="fg"><label>E-mail</label><input type="email" name="email" placeholder="seu@email.com" required></div>
       </div>
       <div class="form-row">
+        <div class="fg"><label>Telefone</label><input type="tel" name="telefone" id="telefone" placeholder="(00) 9-0000-0000" maxlength="16"></div>
         <div class="fg"><label>Município</label><input type="text" name="municipio" placeholder="Nome da cidade"></div>
+      </div>
+      <div class="form-row">
         <div class="fg"><label>Cargo</label>
           <select name="cargo">
             <option>Secretário Municipal</option>
@@ -554,6 +557,18 @@
     btn.style.background = '#2E7D32';
     setTimeout(() => { btn.textContent = 'Enviar mensagem →'; btn.style.background = ''; e.target.reset(); }, 3500);
   }
+</script>
+<script>
+  // Máscara de telefone (DD) N-NNNN-NNNN
+  document.getElementById('telefone').addEventListener('input', function(e) {
+    let v = e.target.value.replace(/\D/g, '').substring(0, 11);
+    if (v.length >= 3) {
+      v = '(' + v.substring(0,2) + ') ' + v.substring(2,3) + '-' + v.substring(3,7) + (v.length > 7 ? '-' + v.substring(7,11) : '');
+    } else if (v.length >= 1) {
+      v = '(' + v;
+    }
+    e.target.value = v;
+  });
 </script>
 </body>
 </html>
