@@ -488,13 +488,13 @@
     <p class="section-sub">Entre em contato e saiba como levar o VoxCidade para o seu município.</p>
     <form action="https://formspree.io/f/xykvlowe" method="POST">
       <div class="form-row">
-        <div class="fg"><label>Nome</label><input type="text" placeholder="Seu nome" required></div>
-        <div class="fg"><label>E-mail</label><input type="email" placeholder="seu@email.com" required></div>
+        <div class="fg"><label>Nome</label><input type="text" name="nome" placeholder="Seu nome" required></div>
+        <div class="fg"><label>E-mail</label><input type="email" name="email" placeholder="seu@email.com" required></div>
       </div>
       <div class="form-row">
-        <div class="fg"><label>Município</label><input type="text" placeholder="Nome da cidade"></div>
+        <div class="fg"><label>Município</label><input type="text" name="municipio" placeholder="Nome da cidade"></div>
         <div class="fg"><label>Cargo</label>
-          <select>
+          <select name="cargo">
             <option>Secretário Municipal</option>
             <option>Prefeito / Vice-prefeito</option>
             <option>Vereador</option>
@@ -504,7 +504,7 @@
           </select>
         </div>
       </div>
-      <div class="fg"><label>Mensagem</label><textarea placeholder="Como podemos ajudar?"></textarea></div>
+      <div class="fg"><label>Mensagem</label><textarea name="mensagem" placeholder="Como podemos ajudar?"></textarea></div>
       <input type="hidden" name="_subject" value="Contato via VoxCidade.com.br">
       <input type="hidden" name="_language" value="pt">
       <button type="submit" class="btn-enviar">Enviar mensagem →</button>
