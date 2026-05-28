@@ -6,6 +6,7 @@
   <title>VoxCidade — Sua cidade, sua voz</title>
   <meta name="description" content="VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais.">
   <meta property="og:title" content="VoxCidade — Sua cidade, sua voz">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -485,7 +486,7 @@
     <p class="section-label" style="text-align:center">Contato</p>
     <h2 class="section-title" style="text-align:center;font-size:clamp(26px,3.5vw,40px)">Sua prefeitura quer aderir?</h2>
     <p class="section-sub">Entre em contato e saiba como levar o VoxCidade para o seu município.</p>
-    <form onsubmit="enviarForm(event)">
+    <form action="https://formspree.io/f/xykvlowe" method="POST">
       <div class="form-row">
         <div class="fg"><label>Nome</label><input type="text" placeholder="Seu nome" required></div>
         <div class="fg"><label>E-mail</label><input type="email" placeholder="seu@email.com" required></div>
@@ -504,6 +505,8 @@
         </div>
       </div>
       <div class="fg"><label>Mensagem</label><textarea placeholder="Como podemos ajudar?"></textarea></div>
+      <input type="hidden" name="_subject" value="Contato via VoxCidade.com.br">
+      <input type="hidden" name="_language" value="pt">
       <button type="submit" class="btn-enviar">Enviar mensagem →</button>
     </form>
   </div>
@@ -516,9 +519,9 @@
     <span>VoxCidade</span>
   </div>
   <ul class="footer-links">
-    <li><a href="#">Sobre</a></li>
-    <li><a href="#">Termos de Uso</a></li>
-    <li><a href="#">Política de Privacidade</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="termos.html">Termos de Uso</a></li>
+    <li><a href="privacidade.html">Política de Privacidade</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="mailto:voxcidade@terra.com.br">voxcidade@terra.com.br</a></li>
   </ul>
