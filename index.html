@@ -3,9 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- VoxCidade v1.0.101 -->
   <title>VoxCidade — Sua cidade, sua voz</title>
-  <meta name="description" content="VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais.">
+  <meta name="description" content="VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais. Registre problemas urbanos, acompanhe resoluções e ganhe pontos pelo engajamento.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://voxcidade.com.br/">
+  <!-- Open Graph -->
   <meta property="og:title" content="VoxCidade — Sua cidade, sua voz">
+  <meta property="og:description" content="VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://voxcidade.com.br/">
+  <meta property="og:image" content="https://voxcidade.com.br/favicon.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="VoxCidade">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VoxCidade — Sua cidade, sua voz">
+  <meta name="twitter:description" content="VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais.">
+  <meta name="twitter:image" content="https://voxcidade.com.br/favicon.png">
+  <!-- Google Analytics — substitua G-XXXXXXXXXX pelo seu Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "VoxCidade",
+    "description": "VoxCidade conecta cidadãos e prefeituras para transformar solicitações em ações reais.",
+    "url": "https://voxcidade.com.br/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "publisher": {"@type": "Organization", "name": "VoxCidade", "url": "https://voxcidade.com.br/"}
+  }
+  </script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,6 +80,8 @@
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--cinza); font-weight: 500; font-size: 15px; transition: color .2s; }
     .nav-links a:hover { color: var(--azul); }
+    .nav-links a.nav-link-destaque { color: var(--azul); font-weight: 600; }
+    .nav-links a.nav-link-destaque:hover { color: var(--amarelo); }
     .nav-cta {
       background: var(--azul); color: #fff; border: none; border-radius: 50px;
       padding: 10px 24px; font-family: 'DM Sans', sans-serif; font-weight: 600;
@@ -322,8 +361,10 @@
   <ul class="nav-links">
     <li><a href="#como">Como funciona</a></li>
     <li><a href="#bene">Benefícios</a></li>
+    <li><a href="#gami">Gamificação</a></li>
     <li><a href="#pref">Para prefeituras</a></li>
     <li><a href="#contato">Contato</a></li>
+    <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank" class="nav-link-destaque">Manual do Administrador</a></li>
   </ul>
   <a href="#download" class="nav-cta">Baixar app</a>
 </nav>
@@ -416,7 +457,7 @@
 </section>
 
 <!-- GAMIFICAÇÃO -->
-<section class="gami">
+<section class="gami" id="gami">
   <div class="gami-inner">
     <div>
       <p class="section-label">Gamificação</p>
@@ -473,7 +514,7 @@
   <h2 class="cta-title">Baixe agora e faça<br>sua voz ser ouvida</h2>
   <p class="cta-sub">Gratuito para cidadãos. Disponível para Android.</p>
   <div class="store-btns">
-    <a href="https://play.google.com/store/apps/details?id=com.example.zelacity" class="store-btn" target="_blank">
+    <a href="https://play.google.com/store/apps/details?id=com.voxcidade.app" class="store-btn" target="_blank">
       <span class="store-btn-icon">&#9654;</span>
       <span><span class="store-btn-label">Disponível no</span>Google Play</span>
     </a>
@@ -528,7 +569,8 @@
     <li><a href="privacidade.html">Política de Privacidade</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="mailto:voxcidade@terra.com.br">voxcidade@terra.com.br</a></li>
-    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual do Administrador VoxCidade (Índice)     </a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual do Administrador (Índice)</a></li>
+    <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank">Manual Completo (protegido por senha)</a></li>
   </ul>
   <p class="footer-copy">© 2026 VoxCidade. Todos os direitos reservados. — Sua cidade, sua voz.</p>
 </footer>
