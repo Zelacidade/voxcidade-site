@@ -61,6 +61,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 84px; }
     body { font-family: 'DM Sans', sans-serif; background: var(--branco); color: var(--escuro); overflow-x: hidden; }
 
     /* NAV */
@@ -234,7 +235,7 @@
     .check-ico { width: 24px; height: 24px; border-radius: 50%; background: var(--azul); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
     /* GAMIFICAÇÃO */
-    .gami { padding: 72px 48px; background: var(--escuro); position: relative; overflow: hidden; }
+    .gami { padding: 88px 48px; background: var(--escuro); position: relative; overflow: hidden; }
     .gami::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(245,168,0,0.07) 0%, transparent 65%); pointer-events:none; }
     .gami-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
     .gami .section-label { color: var(--amarelo); }
