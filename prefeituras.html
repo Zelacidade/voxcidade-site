@@ -108,19 +108,20 @@
   .shots{display:grid;gap:22px;margin-top:30px}
   .shots.j5{grid-template-columns:repeat(5,1fr)}
   .shots.p4{grid-template-columns:repeat(4,1fr)}
+  .shots.p3{grid-template-columns:repeat(3,1fr);max-width:760px;margin-left:auto;margin-right:auto}
   .shot{display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
   .shot.visible{opacity:1;transform:translateY(0)}
   .device{position:relative;width:100%;max-width:178px;padding:8px;border-radius:26px;background:linear-gradient(150deg,#1b2a3d,#0d1b2a);box-shadow:0 22px 44px rgba(13,27,42,0.32),inset 0 0 0 2px rgba(255,255,255,0.06)}
   .device::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:62px;height:12px;background:#0d1b2a;border-radius:0 0 10px 10px;z-index:3}
-  .device img{display:block;width:100%;border-radius:20px;background:#fff}
+  .device img{display:block;width:100%;height:auto;border-radius:20px;background:#fff}
   .device-glare{position:absolute;inset:8px;border-radius:20px;background:linear-gradient(125deg,rgba(255,255,255,0.16) 0%,transparent 30%);pointer-events:none}
-  .shot-step{margin-top:16px;width:26px;height:26px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:'Fraunces',serif}
-  .shot h4{font-family:'Fraunces',serif;font-weight:700;font-size:16px;color:var(--escuro);margin:10px 0 6px;text-align:center}
-  .shot p{font-size:13.5px;color:var(--cinza);line-height:1.5;text-align:center;max-width:210px}
+  .shot-step{margin-top:10px;width:24px;height:24px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;font-family:'Fraunces',serif}
+  .shot h4{font-family:'Fraunces',serif;font-weight:700;font-size:15px;color:var(--escuro);margin:8px 0 4px;text-align:center}
+  .shot p{font-size:12.5px;color:var(--cinza);line-height:1.45;text-align:center;max-width:200px}
 
   /* PAINEL */
   .painel{background:linear-gradient(180deg,#fff 0%,var(--azulbg) 130%)}
-  .painel .shot-tag{margin-top:14px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul)}
+  .painel .shot-tag{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul)}
   .painel .device{max-width:198px}
   .painel-cta{margin-top:50px;text-align:center}
 
@@ -154,10 +155,10 @@
   /* RESULTADOS */
   .result{background:linear-gradient(180deg,var(--azulbg) 0%,#fff 100%)}
   .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
-  .rcard{background:#fff;border-radius:20px;padding:32px 26px;border:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 36px rgba(16,84,168,0.06)}
-  .rcard-ico{width:54px;height:54px;border-radius:15px;background:var(--azulbg);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px}
-  .rcard h4{font-family:'Fraunces',serif;font-weight:700;font-size:19px;color:var(--escuro);margin-bottom:8px}
-  .rcard p{font-size:14.5px;color:var(--cinza);line-height:1.6}
+  .rcard{background:#fff;border-radius:18px;padding:20px 22px;border:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 36px rgba(16,84,168,0.06)}
+  .rcard-ico{width:46px;height:46px;border-radius:13px;background:var(--azulbg);display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:10px}
+  .rcard h4{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--escuro);margin-bottom:6px}
+  .rcard p{font-size:13.5px;color:var(--cinza);line-height:1.5}
 
   /* SEGURANÇA & TECNOLOGIA */
   .seg{background:var(--escuro);position:relative;overflow:hidden}
@@ -166,36 +167,34 @@
   .seg .sec-title{color:#fff}
   .seg .sec-sub{color:rgba(255,255,255,0.55)}
   .seg-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-  .scard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:26px 24px;transition:background .3s,transform .3s}
+  .scard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:18px 20px;transition:background .3s,transform .3s}
   .scard:hover{background:rgba(255,255,255,0.07);transform:translateY(-5px)}
-  .scard-ico{font-size:30px;margin-bottom:14px}
-  .scard h4{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:#fff;margin-bottom:8px}
-  .scard p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6}
+  .scard-ico{font-size:27px;margin-bottom:9px}
+  .scard h4{font-family:'Fraunces',serif;font-weight:700;font-size:16px;color:#fff;margin-bottom:6px}
+  .scard p{font-size:13.5px;color:rgba(255,255,255,0.6);line-height:1.5}
 
   /* CTA FINAL + FORM */
   .final{background:linear-gradient(135deg,#0a3d7a 0%,var(--azul) 100%);position:relative;overflow:hidden;text-align:center}
   .final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(245,168,0,0.14) 0%,transparent 55%)}
   .final-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
-  .final h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(28px,4vw,46px);color:#fff;line-height:1.12;margin-bottom:16px}
-  .final p{font-size:19px;color:rgba(255,255,255,0.65);margin-bottom:30px}
-  .final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
-  .final-btns .btn-amarelo{box-shadow:0 8px 32px rgba(245,168,0,0.4)}
-  .final-form{margin-top:44px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:34px;backdrop-filter:blur(8px);text-align:left}
-  .final-form h3{font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:#fff;text-align:center;margin-bottom:6px}
-  .final-form .sub{font-size:15px;color:rgba(255,255,255,0.55);text-align:center;margin-bottom:22px}
-  form{display:flex;flex-direction:column;gap:14px}
+  .final h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(24px,3vw,34px);color:#fff;line-height:1.14;margin-bottom:10px}
+  .final p{font-size:16px;color:rgba(255,255,255,0.65);margin-bottom:18px}
+  .final-form{margin-top:18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:22px;padding:22px 26px;backdrop-filter:blur(8px);text-align:left}
+  .final-form h3{font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:#fff;text-align:center;margin-bottom:4px}
+  .final-form .sub{font-size:13px;color:rgba(255,255,255,0.55);text-align:center;margin-bottom:12px}
+  form{display:flex;flex-direction:column;gap:10px}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .frow-3{grid-template-columns:1fr 1fr 1fr}
   .fg{display:flex;flex-direction:column;gap:6px}
   .fg label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.8)}
-  .fg input,.fg select,.fg textarea{border:1px solid rgba(255,255,255,0.18);border-radius:12px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:15px;color:#fff;background:rgba(255,255,255,0.08);outline:none;transition:border-color .2s,box-shadow .2s}
+  .fg input,.fg select,.fg textarea{border:1px solid rgba(255,255,255,0.18);border-radius:11px;padding:9px 12px;font-family:'DM Sans',sans-serif;font-size:14.5px;color:#fff;background:rgba(255,255,255,0.08);outline:none;transition:border-color .2s,box-shadow .2s}
   .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.4)}
   .fg select{color:#fff}
   .fg select option{color:#0D1B2A}
   .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--amarelo);box-shadow:0 0 0 3px rgba(245,168,0,0.18)}
-  .fg textarea{resize:vertical;min-height:70px}
+  .fg textarea{resize:vertical;min-height:46px}
   .hp{position:absolute;left:-9999px}
-  .btn-enviar{background:var(--amarelo);color:var(--escuro);border:none;border-radius:50px;padding:14px 38px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;cursor:pointer;align-self:center;margin-top:4px;transition:transform .2s,box-shadow .2s}
+  .btn-enviar{background:var(--amarelo);color:var(--escuro);border:none;border-radius:50px;padding:11px 34px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;cursor:pointer;align-self:center;margin-top:2px;transition:transform .2s,box-shadow .2s}
   .btn-enviar:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(245,168,0,0.4)}
 
   /* FOOTER */
@@ -226,9 +225,24 @@
     .estrat-grid{grid-template-columns:1fr}
     .result-grid,.seg-grid{grid-template-columns:1fr}
     .frow,.frow-3{grid-template-columns:1fr}
+    .shots.j5,.shots.p4,.shots.p3{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
-    .pain-grid,.shots.j5,.shots.p4{grid-template-columns:1fr}
+    .pain-grid,.shots.j5,.shots.p4,.shots.p3{grid-template-columns:1fr}
+  }
+  /* DESKTOP — cada seção ocupa UMA tela cheia, com scroll-snap rígido */
+  @media(min-width:901px){
+    html{scroll-snap-type:y mandatory}
+    .phero,.sec,footer{min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:center}
+    .phero{padding:72px 48px 20px}
+    .sec{padding:72px 48px 20px}
+    footer{padding:48px}
+    .shots,.pain-grid,.flow,.estrat-grid,.result-grid,.seg-grid{margin-top:18px}
+    .device{max-width:132px}
+    .painel .device{max-width:140px}
+    .final-form{margin-top:16px}
+    .sec-sub{font-size:15.5px;margin-bottom:0}
+    .sec-title{margin-bottom:10px}
   }
   @media(prefers-reduced-motion:reduce){
     .phero-orb{animation:none}
@@ -353,9 +367,9 @@
 <!-- O PAINEL DA PREFEITURA -->
 <section class="sec painel center" id="painel">
   <div class="wrap">
-    <p class="sec-label">O painel da prefeitura</p>
-    <h2 class="sec-title">Tudo o que o gestor precisa, em um só lugar</h2>
-    <p class="sec-sub center">Cada solicitação vira informação acionável. Veja como o VoxCidade trabalha para a sua equipe.</p>
+    <p class="sec-label">O painel da prefeitura · parte 1</p>
+    <h2 class="sec-title">Acompanhe e gerencie a cidade</h2>
+    <p class="sec-sub center">Visão geral, demandas, mapa e inteligência artificial — cada solicitação vira informação acionável.</p>
     <div class="shots p4">
       <div class="shot">
         <div class="device"><img src="telas-painel/01-dashboard.webp" alt="Dashboard de indicadores da prefeitura" loading="lazy" width="230" height="409"><span class="device-glare"></span></div>
@@ -381,6 +395,17 @@
         <h4>Pergunte à IA da cidade</h4>
         <p>"Quais os bairros em evidência? Quais os maiores problemas?" A IA responde com base nos dados reais.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- O PAINEL DA PREFEITURA (parte 2) -->
+<section class="sec painel center" id="painel2">
+  <div class="wrap">
+    <p class="sec-label">O painel da prefeitura · parte 2</p>
+    <h2 class="sec-title">Decida, comprove e administre</h2>
+    <p class="sec-sub center">Dados prontos para o gabinete e ferramentas de administração — tudo sob o seu controle.</p>
+    <div class="shots p3">
       <div class="shot">
         <div class="device"><img src="telas-painel/05-relatorios.webp" alt="Relatórios e exportação de dados" loading="lazy" width="230" height="409"><span class="device-glare"></span></div>
         <span class="shot-tag">Relatórios</span>
@@ -399,9 +424,6 @@
         <h4>Controle total</h4>
         <p>Backup de dados, avisos por push para o município, cadastro de gestores e exportações — sob seu comando.</p>
       </div>
-    </div>
-    <div class="painel-cta">
-      <a href="#contato" class="btn-amarelo">Quero ver o painel funcionando →</a>
     </div>
   </div>
 </section>
@@ -499,11 +521,6 @@
   <div class="final-inner">
     <h2>Veja como o VoxCidade pode modernizar a sua prefeitura</h2>
     <p>Agende uma demonstração sem compromisso e conheça a plataforma com os dados da sua cidade.</p>
-    <div class="final-btns">
-      <a href="#form" class="btn-amarelo">Solicitar demonstração</a>
-      <a href="#form" class="btn-ghost">Agendar apresentação</a>
-    </div>
-
     <div class="final-form" id="form">
       <h3>Fale com a nossa equipe</h3>
       <p class="sub">Preencha e retornamos o contato para apresentar o VoxCidade ao seu município.</p>
@@ -558,8 +575,7 @@
 </footer>
 
 <script>
-  // NAV — sombra + hambúrguer
-  document.getElementById('nav').style.position = 'relative';
+  // NAV — hambúrguer (nav permanece fixo p/ flutuar sobre as telas)
   const burger = document.getElementById('burger');
   const navLinks = document.querySelector('.nav-links');
   burger.addEventListener('click', () => {
