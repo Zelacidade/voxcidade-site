@@ -27,6 +27,8 @@
   .nav-links a:hover{color:var(--amarelo)}
   .nav-cta{background:var(--azul);color:#fff;border-radius:50px;padding:10px 24px;font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s}
   .nav-cta:hover{background:var(--azul2);transform:translateY(-1px)}
+  .nav-burger{display:none;background:none;border:none;font-size:24px;line-height:1;color:var(--azul);cursor:pointer;padding:4px 8px}
+  .nav-so-mobile{display:none}
   .page-hero{background:linear-gradient(135deg,#0D1B2A 0%,#1054A8 100%);padding:140px 48px 80px;text-align:center}
   .page-hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:12px}
   .page-hero p{font-size:18px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto}
@@ -48,7 +50,16 @@
   .footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:14px;transition:color .2s}
   .footer-links a:hover{color:var(--amarelo)}
   .footer-copy{font-size:13px}
-  @media(max-width:768px){nav{padding:14px 20px}.nav-links{display:none}.page-hero{padding:110px 24px 60px}.page-content{padding:48px 24px 72px}}
+  @media(max-width:900px){
+    nav{padding:14px 24px}
+    .nav-burger{display:block}
+    .nav-cta{display:none}
+    .nav-so-mobile{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:6px 24px 14px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 24px rgba(16,84,168,0.1)}
+    .nav-links.open{display:flex}
+    .nav-links a{display:block;padding:11px 0;font-size:16px}
+  }
+  @media(max-width:768px){.page-hero{padding:110px 24px 60px}.page-content{padding:48px 24px 72px}}
 </style>
 </head>
 <body>
@@ -64,8 +75,13 @@
     <li><a href="index.html#pref">Para prefeituras</a></li>
     <li><a href="index.html#contato">Contato</a></li>
     <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank">Manual do Administrador</a></li>
+    <li class="nav-so-mobile"><a href="termos.html">Termos de Uso</a></li>
+    <li class="nav-so-mobile"><a href="privacidade.html">Política de Privacidade</a></li>
+    <li class="nav-so-mobile"><a href="sobre.html">Sobre o App</a></li>
+    <li class="nav-so-mobile"><a href="index.html#download">⬇ Baixar app</a></li>
   </ul>
   <a href="index.html#download" class="nav-cta">Baixar app</a>
+  <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
 </nav>
 <div class="page-hero">
   <h1>Termos de Uso</h1>
@@ -156,6 +172,22 @@
   </ul>
   <p class="footer-copy">© 2026 VoxCidade. Todos os direitos reservados. — Sua cidade, sua voz.</p>
 </footer>
-<script>document.getElementById('nav').style.position='relative'</script>
+<script>
+document.getElementById('nav').style.position='relative';
+const burger=document.getElementById('burger');
+const navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',()=>{
+  const aberto=navLinks.classList.toggle('open');
+  burger.textContent=aberto?'✕':'☰';
+  burger.setAttribute('aria-expanded',aberto);
+  burger.setAttribute('aria-label',aberto?'Fechar menu':'Abrir menu');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  burger.textContent='☰';
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Abrir menu');
+}));
+</script>
 </body>
 </html>
