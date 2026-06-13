@@ -625,14 +625,6 @@
   document.querySelectorAll('.pcard').forEach((el,i) => { el.style.transition = `opacity .5s ease ${i*.12}s, transform .5s ease ${i*.12}s`; });
   document.querySelectorAll('.titulo').forEach((el,i) => { el.style.transition = `opacity .4s ease ${i*.08}s, transform .4s ease ${i*.08}s`; });
 
-  // Form submit
-  function enviarForm(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.btn-enviar');
-    btn.textContent = '✅ Mensagem enviada!';
-    btn.style.background = '#2E7D32';
-    setTimeout(() => { btn.textContent = 'Enviar mensagem →'; btn.style.background = ''; e.target.reset(); }, 3500);
-  }
 </script>
 <script>
   // Máscara de telefone (DD) N-NNNN-NNNN
