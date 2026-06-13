@@ -372,6 +372,49 @@
       .titulos { grid-template-columns: repeat(2,1fr); }
       .form-row { grid-template-columns: 1fr; }
     }
+
+    /* SHOWCASE DO APP */
+    .appshow { position: relative; overflow: hidden; padding: 76px 48px; background: linear-gradient(180deg, #fff 0%, var(--azulbg) 130%); }
+    .appshow-blob { position: absolute; border-radius: 50%; filter: blur(64px); pointer-events: none; z-index: 0; }
+    .appshow-blob.b1 { width: 440px; height: 440px; background: radial-gradient(circle, rgba(16,84,168,0.28), transparent 70%); top: -140px; left: -110px; animation: floatOrb 9s ease-in-out infinite; }
+    .appshow-blob.b2 { width: 380px; height: 380px; background: radial-gradient(circle, rgba(245,168,0,0.24), transparent 70%); bottom: -130px; right: -90px; animation: floatOrb 11s ease-in-out infinite reverse; }
+    .appshow-inner { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; }
+    .appshow-head { text-align: center; margin-bottom: 44px; }
+    .appshow-head .section-label, .appshow-head .section-title { text-align: center; }
+    .appshow-head .section-sub { margin: 12px auto 0; }
+    .appshow-grid { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: center; }
+    .phone-wrap { display: flex; justify-content: center; perspective: 1200px; animation: floatLogo 6s ease-in-out infinite; }
+    .phone { position: relative; width: 300px; padding: 14px; border-radius: 46px; background: linear-gradient(150deg, #1b2a3d, #0d1b2a); box-shadow: 0 40px 80px rgba(13,27,42,0.45), inset 0 0 0 2px rgba(255,255,255,0.06); transition: transform .25s ease; transform-style: preserve-3d; }
+    .phone-notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 120px; height: 22px; background: #0d1b2a; border-radius: 0 0 16px 16px; z-index: 3; }
+    .phone-screen { position: relative; border-radius: 34px; overflow: hidden; aspect-ratio: 480 / 853; background: #fff; }
+    .phone-screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity .6s ease, transform .9s ease; }
+    .phone-screen img.active { opacity: 1; transform: scale(1); }
+    .phone-glare { position: absolute; inset: 0; background: linear-gradient(125deg, rgba(255,255,255,0.20) 0%, transparent 32%); pointer-events: none; z-index: 2; border-radius: 34px; }
+    .phone-dots { display: flex; gap: 8px; justify-content: center; margin-top: 22px; }
+    .phone-dots button { width: 8px; height: 8px; border-radius: 50%; border: none; background: rgba(16,84,168,0.25); cursor: pointer; padding: 0; transition: all .3s; }
+    .phone-dots button.active { background: var(--azul); width: 24px; border-radius: 5px; }
+    .appshow-feats { display: flex; flex-direction: column; gap: 8px; }
+    .feat { display: flex; gap: 16px; align-items: flex-start; text-align: left; width: 100%; background: none; border: none; cursor: pointer; padding: 16px 18px; border-radius: 16px; position: relative; transition: background .3s; font-family: inherit; }
+    .feat:hover { background: rgba(16,84,168,0.05); }
+    .feat.active { background: #fff; box-shadow: 0 12px 30px rgba(16,84,168,0.10); }
+    .feat-bar { position: absolute; left: 0; top: 14px; bottom: 14px; width: 3px; border-radius: 3px; background: var(--azul); transform: scaleY(0); transform-origin: top; transition: transform .3s; }
+    .feat.active .feat-bar { transform: scaleY(1); }
+    .feat-ico { font-size: 23px; line-height: 1; flex-shrink: 0; width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; background: var(--azulbg); transition: .3s; }
+    .feat.active .feat-ico { background: var(--azul); transform: scale(1.05); }
+    .feat-tx h4 { font-family: 'Fraunces', serif; font-weight: 700; font-size: 17px; color: var(--escuro); margin-bottom: 3px; }
+    .feat-tx p { font-size: 14px; color: var(--cinza); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .appshow-grid { grid-template-columns: 1fr; gap: 30px; }
+      .phone { width: 244px; }
+      .appshow-feats { flex-direction: row; overflow-x: auto; gap: 10px; padding-bottom: 8px; }
+      .feat { flex-direction: column; min-width: 150px; background: #fff; box-shadow: 0 8px 20px rgba(16,84,168,0.07); gap: 10px; }
+      .feat-bar { display: none; }
+      .feat-tx p { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .phone-wrap, .appshow-blob { animation: none; }
+      .phone-screen img { transition: opacity .3s ease; }
+    }
   </style>
 </head>
 <body>
@@ -485,6 +528,48 @@
         <li><span class="check-ico">✓</span>Relatórios para tomada de decisão municipal</li>
       </ul>
       <a href="#download" class="btn-primary" style="width:fit-content">Comece agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE DO APP -->
+<section class="appshow" id="app">
+  <span class="appshow-blob b1"></span>
+  <span class="appshow-blob b2"></span>
+  <div class="appshow-inner">
+    <div class="appshow-head">
+      <p class="section-label">Conheça o app</p>
+      <h2 class="section-title">O VoxCidade na palma da mão</h2>
+      <p class="section-sub">Do problema ao protocolo em poucos toques. Veja como é simples participar — toque nos recursos ao lado para navegar pelas telas.</p>
+    </div>
+    <div class="appshow-grid">
+      <div>
+        <div class="phone-wrap" id="phoneWrap">
+          <div class="phone" id="phone">
+            <span class="phone-notch"></span>
+            <div class="phone-screen">
+              <img src="telas/01-onboarding.webp" alt="Tela de boas-vindas do VoxCidade" class="active" loading="lazy" width="480" height="853">
+              <img src="telas/02-mapa.webp" alt="Mapa com as solicitações da cidade em tempo real" loading="lazy" width="480" height="853">
+              <img src="telas/03-categorias.webp" alt="Escolha da categoria do problema urbano" loading="lazy" width="480" height="853">
+              <img src="telas/04-registro.webp" alt="Registro com foto, descrição e localização por GPS" loading="lazy" width="480" height="853">
+              <img src="telas/05-voz.webp" alt="Registro de reclamação por voz com IA" loading="lazy" width="480" height="853">
+              <img src="telas/06-confirmacao.webp" alt="Confirmação de envio com protocolo e pontos" loading="lazy" width="480" height="853">
+              <img src="telas/07-widget.webp" alt="Widget do VoxCidade na tela inicial do celular" loading="lazy" width="480" height="853">
+              <span class="phone-glare"></span>
+            </div>
+          </div>
+        </div>
+        <div class="phone-dots" id="phoneDots"></div>
+      </div>
+      <div class="appshow-feats" id="appFeats">
+        <button class="feat active" type="button"><span class="feat-bar"></span><span class="feat-ico">🚀</span><span class="feat-tx"><h4>Sua cidade, sua voz</h4><p>Abertura rápida apresenta o app e já libera o primeiro registro.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">🗺️</span><span class="feat-tx"><h4>Tudo no mapa</h4><p>Veja as solicitações do município em tempo real e toque em “+ Nova Solicitação”.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">🏷️</span><span class="feat-tx"><h4>29 categorias</h4><p>Educação, Saúde, Trânsito, Zeladoria e muito mais — escolha o tema do problema.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">📸</span><span class="feat-tx"><h4>Foto e GPS</h4><p>Tire a foto, descreva e a localização exata é marcada automaticamente.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">🎙️</span><span class="feat-tx"><h4>Registro por voz</h4><p>Sem digitar: fale o problema e a IA transcreve e classifica para você.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">✅</span><span class="feat-tx"><h4>Protocolo na hora</h4><p>Receba o número de protocolo e ganhe pontos por participar da sua cidade.</p></span></button>
+        <button class="feat" type="button"><span class="feat-bar"></span><span class="feat-ico">📲</span><span class="feat-tx"><h4>Widget na tela inicial</h4><p>Acompanhe suas denúncias sem precisar abrir o app.</p></span></button>
+      </div>
     </div>
   </div>
 </section>
@@ -639,6 +724,53 @@
   document.querySelectorAll('.bcard').forEach((el,i) => { el.style.transition = `opacity .5s ease ${i*.1}s, transform .5s ease ${i*.1}s`; });
   document.querySelectorAll('.pcard').forEach((el,i) => { el.style.transition = `opacity .5s ease ${i*.12}s, transform .5s ease ${i*.12}s`; });
   document.querySelectorAll('.titulo').forEach((el,i) => { el.style.transition = `opacity .4s ease ${i*.08}s, transform .4s ease ${i*.08}s`; });
+
+  // Showcase do app — carrossel + recursos + tilt 3D
+  (function(){
+    const phone = document.getElementById('phone');
+    const wrap = document.getElementById('phoneWrap');
+    const imgs = Array.from(document.querySelectorAll('.phone-screen img'));
+    const feats = Array.from(document.querySelectorAll('#appFeats .feat'));
+    const dotsBox = document.getElementById('phoneDots');
+    const grid = document.querySelector('.appshow-grid');
+    if (!phone || imgs.length === 0) return;
+    const N = imgs.length;
+    let idx = 0, timer = null;
+
+    imgs.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Tela ' + (i + 1));
+      if (i === 0) b.className = 'active';
+      b.addEventListener('click', () => { go(i); restart(); });
+      dotsBox.appendChild(b);
+    });
+    const dots = Array.from(dotsBox.children);
+
+    function go(i) {
+      idx = (i + N) % N;
+      imgs.forEach((im, k) => im.classList.toggle('active', k === idx));
+      feats.forEach((f, k) => f.classList.toggle('active', k === idx));
+      dots.forEach((d, k) => d.classList.toggle('active', k === idx));
+    }
+    function start() { timer = setInterval(() => go(idx + 1), 4200); }
+    function restart() { clearInterval(timer); start(); }
+
+    feats.forEach((f, i) => f.addEventListener('click', () => { go(i); restart(); }));
+    grid.addEventListener('mouseenter', () => clearInterval(timer));
+    grid.addEventListener('mouseleave', start);
+    start();
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      wrap.addEventListener('mousemove', (e) => {
+        const r = wrap.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        phone.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
+      });
+      wrap.addEventListener('mouseleave', () => { phone.style.transform = ''; });
+    }
+  })();
 
 </script>
 <script>
