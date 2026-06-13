@@ -178,14 +178,17 @@
     .logo-wrap { position: relative; width: 380px; height: 380px; display: flex; align-items: center; justify-content: center; }
     .ring {
       position: absolute; border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
       animation: spinRing linear infinite;
     }
+    .ring-inner-1 { width: 256px; height: 256px; animation-duration: 18s; border-color: rgba(255,255,255,0.22); }
+    .ring-inner-2 { width: 288px; height: 288px; animation-duration: 26s; animation-direction: reverse; border-color: rgba(245,168,0,0.20); }
     .ring-1 { width: 320px; height: 320px; animation-duration: 32s; }
-    .ring-2 { width: 420px; height: 420px; animation-duration: 22s; animation-direction: reverse; border-color: rgba(245,168,0,0.12); }
-    .ring-3 { width: 510px; height: 510px; animation-duration: 44s; border-color: rgba(211,47,47,0.08); }
+    .ring-2 { width: 420px; height: 420px; animation-duration: 22s; animation-direction: reverse; border-color: rgba(245,168,0,0.22); }
+    .ring-3 { width: 510px; height: 510px; animation-duration: 44s; border-color: rgba(211,47,47,0.18); }
+    .ring-outer { width: 600px; height: 600px; animation-duration: 60s; animation-direction: reverse; border-color: rgba(255,255,255,0.12); }
     @keyframes spinRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-    .ring::after { content:'●'; position:absolute; top:-5px; left:50%; transform:translateX(-50%); font-size:7px; color:rgba(245,168,0,0.5); }
+    .ring::after { content:'●'; position:absolute; top:-5px; left:50%; transform:translateX(-50%); font-size:7px; color:rgba(245,168,0,0.6); }
     .logo-main { width: 230px; height: 230px; object-fit: contain; position: relative; z-index: 2; filter: drop-shadow(0 24px 64px rgba(0,0,0,0.4)); animation: floatLogo 6s ease-in-out infinite; }
     @keyframes floatLogo { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
     @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -416,6 +419,9 @@
     </div>
     <div class="hero-visual">
       <div class="logo-wrap">
+        <div class="ring ring-outer"></div>
+        <div class="ring ring-inner-1"></div>
+        <div class="ring ring-inner-2"></div>
         <div class="ring ring-1"></div>
         <div class="ring ring-2"></div>
         <div class="ring ring-3"></div>
