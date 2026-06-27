@@ -267,6 +267,45 @@
   .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,0.35);border-radius:50%;color:rgba(255,255,255,0.55);transition:color .2s,border-color .2s,transform .2s}
   .footer-social a:hover{color:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
   .footer-social svg{width:18px;height:18px;fill:currentColor}
+
+  /* ===== CENTRAL DE PROVIDÊNCIAS — Geração 3 (Orquestração) · seção ADITIVA ===== */
+  .cprov{background:linear-gradient(180deg,#fff 0%,var(--azulbg) 120%)}
+  .cprov-label{color:var(--amarelo)}
+  .cprov-hl{color:var(--azul)}
+  .cprov-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;text-align:left;max-width:940px;margin-left:auto;margin-right:auto;align-items:stretch}
+  .cprov-mission{background:#fff;border:1px solid rgba(16,84,168,0.12);border-radius:20px;padding:20px 24px;box-shadow:0 16px 40px rgba(16,84,168,0.10);position:relative;overflow:hidden}
+  .cprov-mission::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--azul),var(--amarelo))}
+  .cprov-m-top{display:flex;justify-content:space-between;align-items:center;margin:6px 0 12px}
+  .cprov-m-id{font-family:'Fraunces',serif;font-weight:900;font-size:18px;color:var(--azul)}
+  .cprov-m-prio{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--vermelho);background:rgba(211,47,47,0.10);border:1px solid rgba(211,47,47,0.25);border-radius:50px;padding:4px 11px}
+  .cprov-m-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(16,84,168,0.14);font-size:14px;color:var(--cinza)}
+  .cprov-m-row b{color:var(--escuro);font-weight:700;text-align:right}
+  .cprov-m-sug{margin-top:12px;background:var(--azulbg);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--azul);font-weight:600;line-height:1.4}
+  .cprov-plan{display:flex;flex-direction:column;justify-content:center}
+  .cprov-plan-h{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--escuro);margin-bottom:12px}
+  .cprov-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+  .cprov-list li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--cinza);line-height:1.35}
+  .cprov-list li span{flex-shrink:0;width:21px;height:21px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'Fraunces',serif;margin-top:1px}
+  .cprov-gen{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;max-width:780px;margin-left:auto;margin-right:auto}
+  .cprov-gen-item{background:#fff;border:1px solid rgba(16,84,168,0.12);border-radius:14px;padding:12px 10px;text-align:center}
+  .cprov-gen-item b{display:block;font-family:'Fraunces',serif;font-size:13.5px;color:var(--escuro);margin-bottom:2px}
+  .cprov-gen-item span{font-size:11.5px;color:var(--cinza)}
+  .cprov-gen-on{background:linear-gradient(135deg,var(--azul),var(--azul2));border-color:transparent;box-shadow:0 10px 26px rgba(16,84,168,0.28)}
+  .cprov-gen-on b{color:#fff}
+  .cprov-gen-on span{color:rgba(255,255,255,0.85)}
+  @media(max-width:900px){
+    .cprov-grid{grid-template-columns:1fr;gap:18px}
+    .cprov-list{grid-template-columns:1fr}
+    .cprov-gen{grid-template-columns:1fr 1fr}
+  }
+  @media(min-width:901px){
+    .cprov{justify-content:flex-start;padding-top:20px}
+    .cprov-grid{margin-top:12px;gap:20px}
+    .cprov-mission{padding:16px 22px}
+    .cprov-m-row{padding:7px 0}
+    .cprov-gen{margin-top:12px}
+    .cprov-gen-item{padding:10px 10px}
+  }
 </style>
 </head>
 <body>
@@ -482,6 +521,46 @@
     </div>
     <div class="flow-bar"><span id="flowBar"></span></div>
     <p class="demo-note">▶ Demonstração animada do fluxo — telas reais do aplicativo nas seções acima.</p>
+  </div>
+</section>
+
+<!-- CENTRAL DE PROVIDÊNCIAS — Geração 3 (Orquestração) -->
+<section class="sec cprov center" id="providencias">
+  <div class="wrap">
+    <p class="sec-label cprov-label">Geração 3 · Orquestração · em breve</p>
+    <h2 class="sec-title">Seu painel mostra o que aconteceu.<br>A <span class="cprov-hl">Central de Providências</span> diz o que fazer.</h2>
+    <p class="sec-sub center">Dashboards respondem “o quê” e “onde”. Falta o essencial: <b>e agora? quem age? qual a prioridade? qual o prazo?</b> A Central de Providências transforma cada análise em uma <b>Missão</b> — com responsável e prazo.</p>
+
+    <div class="cprov-grid">
+      <div class="cprov-mission">
+        <div class="cprov-m-top"><span class="cprov-m-id">MISSÃO #1482</span><span class="cprov-m-prio">PRIORIDADE ALTA</span></div>
+        <div class="cprov-m-row"><span>📍 Bairro</span><b>Zona 07</b></div>
+        <div class="cprov-m-row"><span>🎯 Objetivo</span><b>Eliminar 23 buracos</b></div>
+        <div class="cprov-m-row"><span>⏱️ Prazo</span><b>72 horas</b></div>
+        <div class="cprov-m-row"><span>🏛️ Responsável</span><b>Sec. de Infraestrutura</b></div>
+        <div class="cprov-m-sug">💡 Sugestão do sistema: mutirão na via + plano preventivo para o trecho.</div>
+      </div>
+      <div class="cprov-plan">
+        <p class="cprov-plan-h">Cada Missão já nasce com um plano de ação completo:</p>
+        <ul class="cprov-list">
+          <li><span>1</span> Diagnóstico do que foi detectado</li>
+          <li><span>2</span> Nível de prioridade</li>
+          <li><span>3</span> Providências sugeridas</li>
+          <li><span>4</span> Responsável (secretaria / equipe)</li>
+          <li><span>5</span> Fluxo de comunicação</li>
+          <li><span>6</span> Prazo conforme o histórico</li>
+          <li><span>7</span> Indicadores de acompanhamento</li>
+          <li><span>8</span> Escalonamento se ninguém agir</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cprov-gen">
+      <div class="cprov-gen-item"><b>1 · Registro</b><span>o cidadão relata</span></div>
+      <div class="cprov-gen-item"><b>2 · Inteligência</b><span>a IA analisa</span></div>
+      <div class="cprov-gen-item cprov-gen-on"><b>3 · Orquestração</b><span>o sistema aciona</span></div>
+      <div class="cprov-gen-item"><b>4 · Governança</b><span>aprende e prevê</span></div>
+    </div>
   </div>
 </section>
 
