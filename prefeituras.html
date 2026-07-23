@@ -166,6 +166,10 @@
   .seg .sec-label{color:var(--amarelo)}
   .seg .sec-title{color:#fff}
   .seg .sec-sub{color:rgba(255,255,255,0.55)}
+  /* links dentro do texto: o site nao tem regra generica para <a>, e no fundo
+     escuro desta secao o azul padrao do navegador (#0000EE) fica ilegivel */
+  .seg .sec-sub a{color:var(--amarelo);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s}
+  .seg .sec-sub a:hover{color:#fff}
   .seg-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
   .scard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:18px 20px;transition:background .3s,transform .3s}
   .scard:hover{background:rgba(255,255,255,0.07);transform:translateY(-5px)}
@@ -613,7 +617,9 @@
       <div class="scard"><div class="scard-ico">🤖</div><h4>IA e moderação</h4><p>Inteligência artificial classifica demandas e modera conteúdo, mantendo o foco em problemas urbanos legítimos.</p></div>
     </div>
     <p class="sec-sub center" style="margin-top:28px">
-      📘 <strong>Manual do Administrador</strong> — 83 páginas cobrindo todo o painel de gestão.
+      📘 <strong>Manual do Administrador</strong> — 165 páginas em 25 capítulos: além de todo o painel
+      de gestão, traz o plano de implantação na prefeitura, o modelo de governança e papéis, os
+      indicadores de gestão, os prazos de atendimento e a LGPD aplicada ao dia a dia.
       O <a href="INDICE-MANUAL.pdf" target="_blank">índice completo está aberto</a> para consulta.
       O manual na íntegra é <strong>protegido por senha</strong>, por detalhar a configuração interna
       do sistema: solicite o acesso em
