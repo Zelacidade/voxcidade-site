@@ -358,10 +358,24 @@
   .rmm-cta b{color:#fff;font-family:'Fraunces',serif;font-size:16px;display:block;margin-bottom:2px}
   .rmm-cta p{color:rgba(255,255,255,0.78);font-size:13.5px;line-height:1.45}
   .rmm-fonte{font-size:11.5px;color:var(--cinza);margin-top:14px;line-height:1.5}
-  /* Lightbox de página da apresentação */
-  .rmm-lb{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;background:rgba(6,14,26,0.93);padding:20px;cursor:zoom-out}
+  /* Material complementar — prévia da arte institucional + botões */
+  .rmm-comum{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+  .rmm-arte{display:block;width:100%;padding:0;border:1px solid rgba(16,84,168,0.16);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;font-family:'DM Sans',sans-serif;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .rmm-arte:hover,.rmm-arte:focus-visible{transform:translateY(-3px);border-color:var(--azul);box-shadow:0 14px 30px rgba(16,84,168,0.18);outline:none}
+  .rmm-arte img{display:block;width:100%;height:auto}
+  .rmm-arte span{display:block;padding:9px 12px;font-size:12.5px;font-weight:600;color:var(--azul);background:var(--azulbg);text-align:center}
+  .rmm-comum-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+  .rmm-comum-links .btn-dl{width:100%;justify-content:center}
+
+  /* Lightbox de imagem (páginas da apresentação e arte institucional) */
+  .rmm-lb{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;background:rgba(6,14,26,0.93);padding:20px;overflow:auto;cursor:zoom-out}
   .rmm-lb.open{display:flex}
-  .rmm-lb img{max-width:min(780px,100%);max-height:94vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.55)}
+  .rmm-lb img{max-width:min(1500px,100%);max-height:92vh;height:auto;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.55);cursor:zoom-in}
+  .rmm-lb.zoom{align-items:flex-start;justify-content:flex-start;cursor:default}
+  .rmm-lb.zoom img{max-width:none;max-height:none;border-radius:0;cursor:zoom-out;margin:auto}
+  .rmm-lb-close{position:fixed;top:16px;right:18px;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.12);color:#fff;font-size:17px;line-height:1;cursor:pointer;transition:background .2s}
+  .rmm-lb-close:hover{background:rgba(255,255,255,0.26)}
+  .rmm-lb-hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:2;font-size:12.5px;color:rgba(255,255,255,0.8);background:rgba(0,0,0,0.45);border-radius:50px;padding:6px 16px;pointer-events:none}
   html.rmm-lock{overflow:hidden}
 
   @media(max-width:900px){
@@ -371,6 +385,7 @@
     .rmm-pages{grid-template-columns:repeat(3,1fr)}
     .rmm-app{grid-template-columns:1fr 1fr}
     .rmm-head h3{font-size:21px}
+    .rmm-comum{grid-template-columns:1fr;gap:14px}
   }
   @media(min-width:901px){
     /* 78px = altura do nav fixo (75) + respiro: o kicker não fica sob a barra */
@@ -770,7 +785,11 @@
 <div class="rmm-modal" id="rmmModal" role="dialog" aria-modal="true" aria-labelledby="rmmTitle" aria-hidden="true">
   <div class="rmm-box" id="rmmBox"></div>
 </div>
-<div class="rmm-lb" id="rmmLb" aria-hidden="true"><img src="" alt="Página da apresentação institucional" id="rmmLbImg"></div>
+<div class="rmm-lb" id="rmmLb" aria-hidden="true">
+  <button class="rmm-lb-close" id="rmmLbClose" aria-label="Fechar visualização">✕</button>
+  <img src="" alt="" id="rmmLbImg">
+  <span class="rmm-lb-hint" id="rmmLbHint"></span>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -900,6 +919,7 @@
     const box   = document.getElementById('rmmBox');
     const lb    = document.getElementById('rmmLb');
     const lbImg = document.getElementById('rmmLbImg');
+    const lbHint= document.getElementById('rmmLbHint');
     if (!modal || !box) return;
 
     function ficha(slug) {
@@ -908,7 +928,8 @@
       let pgs = '';
       for (let i = 1; i <= 6; i++) {
         const src = 'rmm/paginas/' + slug + '-p' + i + '.webp';
-        pgs += '<button class="rmm-pg" data-full="' + src + '" title="Ampliar página ' + i + '">' +
+        pgs += '<button class="rmm-pg" data-full="' + src + '" title="Ampliar página ' + i + '" ' +
+               'data-legenda="Página ' + i + ' de 6 — apresentação para ' + c.n + '">' +
                '<img src="' + src + '" alt="Página ' + i + ' da apresentação para ' + c.n + '" loading="lazy"></button>';
       }
       return '' +
@@ -945,10 +966,17 @@
       '</div>' +
 
       '<h4 class="rmm-h4">📎 Material complementar</h4>' +
-      '<div class="rmm-dl" style="margin-top:0">' +
-        '<a class="btn-dl dl-sec" href="rmm/comum/apresentacao-institucional.png" download>⬇ Arte institucional (PNG, 2,1 MB)</a>' +
-        '<a class="btn-dl dl-sec" href="rmm/comum/voxcidade-apresentacao-9x16.mp4" target="_blank" rel="noopener">▶ Vídeo de apresentação (8,2 MB)</a>' +
-        '<a class="btn-dl dl-sec" href="INDICE-MANUAL.pdf" target="_blank" rel="noopener">📘 Índice do Manual do Administrador</a>' +
+      '<div class="rmm-comum">' +
+        '<button class="rmm-arte" data-full="rmm/comum/apresentacao-institucional-grande.webp" ' +
+          'data-legenda="Arte institucional do VoxCidade" title="Ampliar a arte institucional">' +
+          '<img src="rmm/comum/apresentacao-institucional.webp" alt="Arte institucional do VoxCidade — plataforma estratégica para uma gestão municipal eficiente, transparente e inteligente" loading="lazy">' +
+          '<span>🔍 Arte institucional · clique para ampliar</span>' +
+        '</button>' +
+        '<div class="rmm-comum-links">' +
+          '<a class="btn-dl dl-sec" href="rmm/comum/apresentacao-institucional.png" download>⬇ Baixar a arte (PNG, 2,1 MB)</a>' +
+          '<a class="btn-dl dl-sec" href="rmm/comum/voxcidade-apresentacao-9x16.mp4" target="_blank" rel="noopener">▶ Vídeo de apresentação (8,2 MB)</a>' +
+          '<a class="btn-dl dl-sec" href="INDICE-MANUAL.pdf" target="_blank" rel="noopener">📘 Índice do Manual do Administrador</a>' +
+        '</div>' +
       '</div>' +
 
       '<div class="rmm-cta">' +
@@ -979,11 +1007,8 @@
         const alvo = document.getElementById('contato');
         if (alvo) alvo.scrollIntoView({behavior:'smooth', block:'start'});
       });
-      box.querySelectorAll('.rmm-pg').forEach(b => b.addEventListener('click', () => {
-        lbImg.src = b.dataset.full;
-        lb.classList.add('open');
-        lb.setAttribute('aria-hidden', 'false');
-      }));
+      box.querySelectorAll('.rmm-pg, .rmm-arte').forEach(b =>
+        b.addEventListener('click', () => abrirLb(b.dataset.full, b.dataset.legenda || '')));
     }
     function fechar() {
       modal.classList.remove('open');
@@ -993,16 +1018,39 @@
       history.replaceState(null, '', '#rmm');
       window.scrollTo(0, scrollY);
     }
+    function dica() {
+      const z = lb.classList.contains('zoom');
+      lbHint.textContent = (lbImg.dataset.legenda ? lbImg.dataset.legenda + ' · ' : '') +
+        (z ? 'clique para reduzir' : 'clique para ampliar') + ' · Esc fecha';
+    }
+    function abrirLb(src, legenda) {
+      lbImg.src = src;
+      lbImg.alt = legenda || 'Material do VoxCidade ampliado';
+      lbImg.dataset.legenda = legenda || '';
+      lb.classList.remove('zoom');
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      lb.scrollTop = 0; lb.scrollLeft = 0;
+      dica();
+    }
     function fecharLb() {
-      lb.classList.remove('open');
+      lb.classList.remove('open', 'zoom');
       lb.setAttribute('aria-hidden', 'true');
       lbImg.src = '';
+      lbHint.textContent = '';
     }
 
     document.querySelectorAll('.rmm-city').forEach(b =>
       b.addEventListener('click', () => abrir(b.dataset.slug)));
     modal.addEventListener('click', e => { if (e.target === modal) fechar(); });
-    lb.addEventListener('click', fecharLb);
+    // no lightbox: clique no fundo fecha, clique na imagem alterna o tamanho real
+    lb.addEventListener('click', e => { if (e.target === lb) fecharLb(); });
+    lbImg.addEventListener('click', () => {
+      lb.classList.toggle('zoom');
+      lb.scrollTop = 0; lb.scrollLeft = 0;
+      dica();
+    });
+    document.getElementById('rmmLbClose').addEventListener('click', fecharLb);
     document.addEventListener('keydown', e => {
       if (e.key !== 'Escape') return;
       if (lb.classList.contains('open')) fecharLb();
