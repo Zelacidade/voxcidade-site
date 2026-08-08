@@ -310,6 +310,77 @@
     .cprov-gen{margin-top:12px}
     .cprov-gen-item{padding:10px 10px}
   }
+
+  /* ===== RMM — Municípios Selecionados da Região Metropolitana de Maringá ===== */
+  .rmm{background:linear-gradient(180deg,var(--claro) 0%,#fff 100%)}
+  .rmm-stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .rmm-stat{background:#fff;border:1px solid rgba(16,84,168,0.14);border-radius:50px;padding:7px 16px;font-size:13px;color:var(--cinza)}
+  .rmm-stat b{color:var(--azul);font-family:'Fraunces',serif;font-weight:900;font-size:15px}
+  .rmm-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px;max-width:940px;margin-left:auto;margin-right:auto}
+  .rmm-city{width:138px;background:#fff;border:1px solid rgba(16,84,168,0.14);border-radius:16px;padding:13px 8px 11px;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;align-items:center;gap:6px;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .rmm-city:hover,.rmm-city:focus-visible{transform:translateY(-4px);border-color:var(--azul);box-shadow:0 14px 30px rgba(16,84,168,0.16);outline:none}
+  .rmm-city img{width:44px;height:44px;object-fit:contain}
+  .rmm-city b{font-family:'Fraunces',serif;font-weight:700;font-size:14px;color:var(--escuro);line-height:1.15;text-align:center}
+  .rmm-city span{font-size:11.5px;color:var(--cinza)}
+  .rmm-note{font-size:12.5px;color:var(--cinza);margin-top:16px;line-height:1.5}
+  .rmm-note b{color:var(--azul)}
+
+  /* Modal do município */
+  .rmm-modal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-start;justify-content:center;padding:24px 16px;background:rgba(6,14,26,0.72);backdrop-filter:blur(4px);overflow-y:auto;text-align:left}
+  .rmm-modal.open{display:flex}
+  .rmm-box{position:relative;width:100%;max-width:960px;background:#fff;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,0.42);padding:26px 30px 30px;margin:auto}
+  .rmm-close{position:absolute;top:12px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(16,84,168,0.18);background:#fff;color:var(--azul);font-size:17px;line-height:1;cursor:pointer;transition:background .2s}
+  .rmm-close:hover{background:var(--azulbg)}
+  .rmm-head{display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(16,84,168,0.12);padding-bottom:16px;padding-right:34px}
+  .rmm-head img{width:60px;height:60px;object-fit:contain;flex-shrink:0}
+  .rmm-head h3{font-family:'Fraunces',serif;font-weight:900;font-size:26px;color:var(--escuro);line-height:1.1}
+  .rmm-head p{font-size:13px;color:var(--cinza);margin-top:3px}
+  .rmm-h4{font-family:'Fraunces',serif;font-weight:700;font-size:16px;color:var(--escuro);margin:22px 0 10px}
+  .rmm-tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .rmm-tile{background:var(--claro);border:1px solid rgba(16,84,168,0.10);border-radius:14px;padding:12px 10px;text-align:center}
+  .rmm-tile b{display:block;font-family:'Fraunces',serif;font-weight:900;font-size:18px;color:var(--azul);line-height:1.1}
+  .rmm-tile span{display:block;font-size:11px;color:var(--cinza);margin-top:4px;line-height:1.3}
+  .rmm-perfil{font-size:14px;color:var(--cinza);line-height:1.6;margin-top:12px;background:var(--azulbg);border-radius:12px;padding:12px 16px}
+  .rmm-pages{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  .rmm-pg{border:1px solid rgba(16,84,168,0.14);border-radius:8px;overflow:hidden;background:#fff;cursor:zoom-in;padding:0;display:block;transition:transform .18s,box-shadow .18s}
+  .rmm-pg:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(16,84,168,0.18)}
+  .rmm-pg img{display:block;width:100%;height:auto}
+  .rmm-dl{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .btn-dl{display:inline-flex;align-items:center;gap:8px;background:var(--azul);color:#fff;border-radius:50px;padding:10px 20px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:background .2s,transform .2s}
+  .btn-dl:hover{background:var(--azul2);transform:translateY(-2px)}
+  .btn-dl.dl-sec{background:#fff;color:var(--azul);border-color:rgba(16,84,168,0.3)}
+  .btn-dl.dl-sec:hover{background:var(--azulbg)}
+  .rmm-app{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .rmm-appc{background:#fff;border:1px solid rgba(16,84,168,0.12);border-radius:14px;padding:14px}
+  .rmm-appc h5{font-family:'Fraunces',serif;font-weight:700;font-size:14px;color:var(--escuro);margin-bottom:5px}
+  .rmm-appc p{font-size:12.5px;color:var(--cinza);line-height:1.45}
+  .rmm-cta{margin-top:22px;background:linear-gradient(135deg,#0a3d7a,var(--azul));border-radius:16px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .rmm-cta b{color:#fff;font-family:'Fraunces',serif;font-size:16px;display:block;margin-bottom:2px}
+  .rmm-cta p{color:rgba(255,255,255,0.78);font-size:13.5px;line-height:1.45}
+  .rmm-fonte{font-size:11.5px;color:var(--cinza);margin-top:14px;line-height:1.5}
+  /* Lightbox de página da apresentação */
+  .rmm-lb{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;background:rgba(6,14,26,0.93);padding:20px;cursor:zoom-out}
+  .rmm-lb.open{display:flex}
+  .rmm-lb img{max-width:min(780px,100%);max-height:94vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.55)}
+  html.rmm-lock{overflow:hidden}
+
+  @media(max-width:900px){
+    .rmm-city{width:calc(50% - 6px);max-width:170px}
+    .rmm-box{padding:22px 18px 24px;border-radius:18px}
+    .rmm-tiles{grid-template-columns:1fr 1fr}
+    .rmm-pages{grid-template-columns:repeat(3,1fr)}
+    .rmm-app{grid-template-columns:1fr 1fr}
+    .rmm-head h3{font-size:21px}
+  }
+  @media(min-width:901px){
+    /* 78px = altura do nav fixo (75) + respiro: o kicker não fica sob a barra */
+    .rmm{justify-content:flex-start;padding-top:78px}
+    .rmm-stats{margin-top:10px}
+    .rmm-grid{margin-top:12px;gap:10px}
+    .rmm-city{padding:10px 8px 9px;gap:5px}
+    .rmm-city img{width:38px;height:38px}
+    .rmm-note{margin-top:12px;font-size:12px}
+  }
 </style>
 </head>
 <body>
@@ -325,6 +396,7 @@
     <li><a href="index.html#app">Conheça o app</a></li>
     <li><a href="index.html#gami">Gamificação</a></li>
     <li><a href="prefeituras.html" class="atual">Para prefeituras</a></li>
+    <li><a href="#rmm" title="Municípios Selecionados da Região Metropolitana de Maringá">RMM</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual</a></li>
     <li class="nav-so-desktop"><a href="faq.html">FAQ</a></li>
@@ -666,6 +738,40 @@
   </div>
 </section>
 
+<!-- RMM — MUNICÍPIOS SELECIONADOS DA REGIÃO METROPOLITANA DE MARINGÁ -->
+<section class="sec rmm center" id="rmm">
+  <div class="wrap">
+    <p class="sec-label">Região Metropolitana de Maringá</p>
+    <h2 class="sec-title">Municípios Selecionados da Região Metropolitana de Maringá</h2>
+    <p class="sec-sub center">Clique no seu município para ver os dados oficiais da cidade, folhear a apresentação institucional do VoxCidade preparada para ela e baixar o material.</p>
+    <div class="rmm-stats">
+      <span class="rmm-stat"><b>11</b> municípios</span>
+      <span class="rmm-stat"><b>734.404</b> habitantes (Censo IBGE 2022)</span>
+      <span class="rmm-stat"><b>2.840 km²</b> de território</span>
+    </div>
+    <div class="rmm-grid" id="rmmGrid">
+      <button class="rmm-city" data-slug="maringa"><img src="rmm/brasoes/maringa.webp" alt="Brasão de Maringá" width="44" height="44" loading="lazy"><b>Maringá</b><span>409.657 hab.</span></button>
+      <button class="rmm-city" data-slug="sarandi"><img src="rmm/brasoes/sarandi.webp" alt="Brasão de Sarandi" width="44" height="44" loading="lazy"><b>Sarandi</b><span>118.455 hab.</span></button>
+      <button class="rmm-city" data-slug="paicandu"><img src="rmm/brasoes/paicandu.webp" alt="Brasão de Paiçandu" width="44" height="44" loading="lazy"><b>Paiçandu</b><span>45.962 hab.</span></button>
+      <button class="rmm-city" data-slug="marialva"><img src="rmm/brasoes/marialva.webp" alt="Brasão de Marialva" width="44" height="44" loading="lazy"><b>Marialva</b><span>41.851 hab.</span></button>
+      <button class="rmm-city" data-slug="mandaguari"><img src="rmm/brasoes/mandaguari.webp" alt="Brasão de Mandaguari" width="44" height="44" loading="lazy"><b>Mandaguari</b><span>36.716 hab.</span></button>
+      <button class="rmm-city" data-slug="mandaguacu"><img src="rmm/brasoes/mandaguacu.webp" alt="Brasão de Mandaguaçu" width="44" height="44" loading="lazy"><b>Mandaguaçu</b><span>31.457 hab.</span></button>
+      <button class="rmm-city" data-slug="astorga"><img src="rmm/brasoes/astorga.webp" alt="Brasão de Astorga" width="44" height="44" loading="lazy"><b>Astorga</b><span>25.475 hab.</span></button>
+      <button class="rmm-city" data-slug="floresta"><img src="rmm/brasoes/floresta.webp" alt="Brasão de Floresta" width="44" height="44" loading="lazy"><b>Floresta</b><span>10.458 hab.</span></button>
+      <button class="rmm-city" data-slug="drcamargo"><img src="rmm/brasoes/drcamargo.webp" alt="Brasão de Doutor Camargo" width="44" height="44" loading="lazy"><b>Doutor Camargo</b><span>6.327 hab.</span></button>
+      <button class="rmm-city" data-slug="iguaracu"><img src="rmm/brasoes/iguaracu.webp" alt="Brasão de Iguaraçu" width="44" height="44" loading="lazy"><b>Iguaraçu</b><span>5.338 hab.</span></button>
+      <button class="rmm-city" data-slug="ivatuba"><img src="rmm/brasoes/ivatuba.webp" alt="Brasão de Ivatuba" width="44" height="44" loading="lazy"><b>Ivatuba</b><span>2.708 hab.</span></button>
+    </div>
+    <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 6 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
+  </div>
+</section>
+
+<!-- Modal do município (preenchido por JS) -->
+<div class="rmm-modal" id="rmmModal" role="dialog" aria-modal="true" aria-labelledby="rmmTitle" aria-hidden="true">
+  <div class="rmm-box" id="rmmBox"></div>
+</div>
+<div class="rmm-lb" id="rmmLb" aria-hidden="true"><img src="" alt="Página da apresentação institucional" id="rmmLbImg"></div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
@@ -759,6 +865,154 @@
     }
     e.target.value = v;
   });
+
+  /* ===== RMM — fichas dos 11 municípios ===== */
+  (function () {
+    const CID = {
+      maringa:    {n:'Maringá',        f:'Maringa',        ibge:'4115200', p22:409657, p25:429660, area:487.012, dens:841.16,  pib:22655738, mb:'3,9',
+                   perfil:'Cidade-polo da região: concentra 56% da população dos 11 municípios e a maior malha urbana, com 841 habitantes por km².'},
+      sarandi:    {n:'Sarandi',        f:'Sarandi',        ibge:'4126256', p22:118455, p25:128106, area:103.501, dens:1144.48, pib:2072735,  mb:'4,6',
+                   perfil:'A maior densidade demográfica da lista: 1.144 habitantes por km² em apenas 103 km² — cidade compacta e conurbada a Maringá.'},
+      paicandu:   {n:'Paiçandu',       f:'Paicandu',       ibge:'4117503', p22:45962,  p25:48695,  area:171.379, dens:268.19,  pib:1057696,  mb:'4,7',
+                   perfil:'Conurbada a Maringá, com 268 hab/km² e crescimento de 5,9% entre o Censo 2022 e a estimativa de 2025.'},
+      marialva:   {n:'Marialva',       f:'Marialva',       ibge:'4114807', p22:41851,  p25:44749,  area:475.564, dens:88.00,   pib:2654433,  mb:'4,8',
+                   perfil:'Território extenso (476 km²) e o segundo maior PIB da lista: demanda urbana e rural convivem, e o deslocamento das equipes pesa no tempo de resposta.'},
+      mandaguari: {n:'Mandaguari',     f:'Mandaguari',     ibge:'4114203', p22:36716,  p25:38313,  area:335.814, dens:109.33,  pib:1835706,  mb:'4,9',
+                   perfil:'36,7 mil habitantes em 336 km², com PIB de R$ 1,8 bilhão — um dos maiores da região fora de Maringá.'},
+      mandaguacu: {n:'Mandaguaçu',     f:'Mandaguacu',     ibge:'4114104', p22:31457,  p25:34521,  area:294.019, dens:106.99,  pib:687733,   mb:'4,8',
+                   perfil:'Cresceu 9,7% entre o Censo 2022 e a estimativa de 2025 — o segundo maior avanço proporcional entre os 11 municípios.'},
+      astorga:    {n:'Astorga',        f:'Astorga',        ibge:'4102109', p22:25475,  p25:26203,  area:434.792, dens:58.59,   pib:882920,   mb:'4,6',
+                   perfil:'Um dos maiores territórios da região (435 km²) para 25,5 mil habitantes: sede urbana compacta e grande área rural a atender.'},
+      floresta:   {n:'Floresta',       f:'Floresta',       ibge:'4107900', p22:10458,  p25:11522,  area:158.226, dens:66.10,   pib:271124,   mb:'5,2',
+                   perfil:'O maior crescimento proporcional da lista: +10,2% entre o Censo 2022 e a estimativa de 2025, chegando a 11,5 mil habitantes.'},
+      drcamargo:  {n:'Doutor Camargo', f:'Doutor-Camargo', ibge:'4107306', p22:6327,   p25:6517,   area:118.279, dens:53.49,   pib:200365,   mb:'4,9',
+                   perfil:'Município de pequeno porte (6,3 mil habitantes em 118 km²), onde cada demanda registrada tem peso alto no indicador da gestão.'},
+      iguaracu:   {n:'Iguaraçu',       f:'Iguaracu',       ibge:'4110003', p22:5338,   p25:5693,   area:164.983, dens:32.35,   pib:212505,   mb:'5,0',
+                   perfil:'5,3 mil habitantes em 165 km²: baixa densidade (32,4 hab/km²) e forte componente rural na demanda por serviços.'},
+      ivatuba:    {n:'Ivatuba',        f:'Ivatuba',        ibge:'4111605', p22:2708,   p25:2685,   area:96.661,  dens:28.02,   pib:143593,   mb:'5,3',
+                   perfil:'O menor município da lista — 2,7 mil habitantes em 97 km² — e o único cuja estimativa de 2025 ficou abaixo do Censo 2022.'}
+    };
+
+    const nf = (v, d) => v.toLocaleString('pt-BR', {minimumFractionDigits:d, maximumFractionDigits:d});
+    const pib = m => m >= 1000000 ? 'R$ ' + nf(m/1000000, 1) + ' bi' : 'R$ ' + nf(m/1000, 1) + ' mi';
+
+    const modal = document.getElementById('rmmModal');
+    const box   = document.getElementById('rmmBox');
+    const lb    = document.getElementById('rmmLb');
+    const lbImg = document.getElementById('rmmLbImg');
+    if (!modal || !box) return;
+
+    function ficha(slug) {
+      const c = CID[slug];
+      const pdf = 'rmm/folders/VoxCidade-Apresentacao-' + c.f + '.pdf';
+      let pgs = '';
+      for (let i = 1; i <= 6; i++) {
+        const src = 'rmm/paginas/' + slug + '-p' + i + '.webp';
+        pgs += '<button class="rmm-pg" data-full="' + src + '" title="Ampliar página ' + i + '">' +
+               '<img src="' + src + '" alt="Página ' + i + ' da apresentação para ' + c.n + '" loading="lazy"></button>';
+      }
+      return '' +
+      '<button class="rmm-close" id="rmmClose" aria-label="Fechar">✕</button>' +
+      '<div class="rmm-head">' +
+        '<img src="rmm/brasoes/' + slug + '.webp" alt="Brasão de ' + c.n + '">' +
+        '<div><h3 id="rmmTitle">' + c.n + '</h3>' +
+        '<p>Paraná · Região Metropolitana de Maringá · código IBGE ' + c.ibge + '</p></div>' +
+      '</div>' +
+
+      '<h4 class="rmm-h4">📊 O município em números</h4>' +
+      '<div class="rmm-tiles">' +
+        '<div class="rmm-tile"><b>' + nf(c.p22,0) + '</b><span>habitantes<br>Censo 2022</span></div>' +
+        '<div class="rmm-tile"><b>' + nf(c.p25,0) + '</b><span>estimativa<br>IBGE 2025</span></div>' +
+        '<div class="rmm-tile"><b>' + nf(c.area,1) + '</b><span>km² de<br>território</span></div>' +
+        '<div class="rmm-tile"><b>' + nf(c.dens,1) + '</b><span>habitantes<br>por km²</span></div>' +
+        '<div class="rmm-tile"><b>' + pib(c.pib) + '</b><span>PIB municipal<br>2021</span></div>' +
+      '</div>' +
+      '<p class="rmm-perfil">' + c.perfil + '</p>' +
+
+      '<h4 class="rmm-h4">📄 Apresentação institucional para ' + c.n + '</h4>' +
+      '<div class="rmm-pages">' + pgs + '</div>' +
+      '<div class="rmm-dl">' +
+        '<a class="btn-dl" href="' + pdf + '" download="VoxCidade-Apresentacao-' + c.f + '.pdf">⬇ Baixar PDF (' + c.mb + ' MB)</a>' +
+        '<a class="btn-dl dl-sec" href="' + pdf + '" target="_blank" rel="noopener">Abrir no navegador ↗</a>' +
+      '</div>' +
+
+      '<h4 class="rmm-h4">📱 O que é o VoxCidade</h4>' +
+      '<div class="rmm-app">' +
+        '<div class="rmm-appc"><h5>Canal único do cidadão</h5><p>App gratuito para Android: o morador registra a demanda com foto, voz e localização, escolhe entre 29 categorias e recebe um protocolo para acompanhar.</p></div>' +
+        '<div class="rmm-appc"><h5>Painel da prefeitura</h5><p>Dashboard, mapa de calor georreferenciado, relatórios e indicadores. Cada secretaria vê o que é dela, com prazos e responsáveis.</p></div>' +
+        '<div class="rmm-appc"><h5>Inteligência e providências</h5><p>A IA analisa foto e texto, agrupa o que se repete e a Central de Providências transforma a análise em Missões com responsável e prazo.</p></div>' +
+        '<div class="rmm-appc"><h5>Seguro e em conformidade</h5><p>Dados criptografados, isolamento por município, backup com plano de recuperação e total conformidade com a LGPD.</p></div>' +
+      '</div>' +
+
+      '<h4 class="rmm-h4">📎 Material complementar</h4>' +
+      '<div class="rmm-dl" style="margin-top:0">' +
+        '<a class="btn-dl dl-sec" href="rmm/comum/apresentacao-institucional.png" download>⬇ Arte institucional (PNG, 2,1 MB)</a>' +
+        '<a class="btn-dl dl-sec" href="rmm/comum/voxcidade-apresentacao-9x16.mp4" target="_blank" rel="noopener">▶ Vídeo de apresentação (8,2 MB)</a>' +
+        '<a class="btn-dl dl-sec" href="INDICE-MANUAL.pdf" target="_blank" rel="noopener">📘 Índice do Manual do Administrador</a>' +
+      '</div>' +
+
+      '<div class="rmm-cta">' +
+        '<div><b>Quer ver a plataforma com os dados de ' + c.n + '?</b>' +
+        '<p>Demonstração de 30 a 40 minutos, sem compromisso, para o gabinete e as secretarias.</p></div>' +
+        '<button class="btn-dl" id="rmmDemo" style="background:var(--amarelo);color:var(--escuro)">Solicitar demonstração →</button>' +
+      '</div>' +
+      '<p class="rmm-fonte">Fontes: IBGE — Censo Demográfico 2022 (população, área e densidade), Estimativas da População 2025 e Produto Interno Bruto dos Municípios 2021. O brasão é de uso do respectivo município; o VoxCidade não possui vínculo oficial com as prefeituras citadas.</p>';
+    }
+
+    let scrollY = 0;
+    function abrir(slug) {
+      if (!CID[slug]) return;
+      scrollY = window.scrollY;
+      box.innerHTML = ficha(slug);
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.add('rmm-lock');
+      modal.scrollTop = 0;
+      history.replaceState(null, '', '#rmm-' + slug);
+      const cl = document.getElementById('rmmClose');
+      if (cl) { cl.addEventListener('click', fechar); cl.focus(); }
+      const demo = document.getElementById('rmmDemo');
+      if (demo) demo.addEventListener('click', () => {
+        const mun = document.getElementById('f-mun');
+        fechar();
+        if (mun) mun.value = CID[slug].n;
+        const alvo = document.getElementById('contato');
+        if (alvo) alvo.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      box.querySelectorAll('.rmm-pg').forEach(b => b.addEventListener('click', () => {
+        lbImg.src = b.dataset.full;
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden', 'false');
+      }));
+    }
+    function fechar() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.classList.remove('rmm-lock');
+      box.innerHTML = '';
+      history.replaceState(null, '', '#rmm');
+      window.scrollTo(0, scrollY);
+    }
+    function fecharLb() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      lbImg.src = '';
+    }
+
+    document.querySelectorAll('.rmm-city').forEach(b =>
+      b.addEventListener('click', () => abrir(b.dataset.slug)));
+    modal.addEventListener('click', e => { if (e.target === modal) fechar(); });
+    lb.addEventListener('click', fecharLb);
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      if (lb.classList.contains('open')) fecharLb();
+      else if (modal.classList.contains('open')) fechar();
+    });
+
+    // link direto: prefeituras.html#rmm-maringa abre a ficha do município
+    const h = (location.hash || '').replace('#rmm-', '');
+    if (h && CID[h]) setTimeout(() => abrir(h), 350);
+  })();
 </script>
 </body>
 </html>
