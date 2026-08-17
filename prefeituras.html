@@ -766,17 +766,17 @@
       <span class="rmm-stat"><b>2.840 km²</b> de território</span>
     </div>
     <div class="rmm-grid" id="rmmGrid">
-      <button class="rmm-city" data-slug="maringa"><img src="rmm/brasoes/maringa.webp" alt="Brasão de Maringá" width="44" height="44" loading="lazy"><b>Maringá</b><span>409.657 hab.</span></button>
-      <button class="rmm-city" data-slug="sarandi"><img src="rmm/brasoes/sarandi.webp" alt="Brasão de Sarandi" width="44" height="44" loading="lazy"><b>Sarandi</b><span>118.455 hab.</span></button>
-      <button class="rmm-city" data-slug="paicandu"><img src="rmm/brasoes/paicandu.webp" alt="Brasão de Paiçandu" width="44" height="44" loading="lazy"><b>Paiçandu</b><span>45.962 hab.</span></button>
-      <button class="rmm-city" data-slug="marialva"><img src="rmm/brasoes/marialva.webp" alt="Brasão de Marialva" width="44" height="44" loading="lazy"><b>Marialva</b><span>41.851 hab.</span></button>
-      <button class="rmm-city" data-slug="mandaguari"><img src="rmm/brasoes/mandaguari.webp" alt="Brasão de Mandaguari" width="44" height="44" loading="lazy"><b>Mandaguari</b><span>36.716 hab.</span></button>
-      <button class="rmm-city" data-slug="mandaguacu"><img src="rmm/brasoes/mandaguacu.webp" alt="Brasão de Mandaguaçu" width="44" height="44" loading="lazy"><b>Mandaguaçu</b><span>31.457 hab.</span></button>
       <button class="rmm-city" data-slug="astorga"><img src="rmm/brasoes/astorga.webp" alt="Brasão de Astorga" width="44" height="44" loading="lazy"><b>Astorga</b><span>25.475 hab.</span></button>
-      <button class="rmm-city" data-slug="floresta"><img src="rmm/brasoes/floresta.webp" alt="Brasão de Floresta" width="44" height="44" loading="lazy"><b>Floresta</b><span>10.458 hab.</span></button>
       <button class="rmm-city" data-slug="drcamargo"><img src="rmm/brasoes/drcamargo.webp" alt="Brasão de Doutor Camargo" width="44" height="44" loading="lazy"><b>Doutor Camargo</b><span>6.327 hab.</span></button>
+      <button class="rmm-city" data-slug="floresta"><img src="rmm/brasoes/floresta.webp" alt="Brasão de Floresta" width="44" height="44" loading="lazy"><b>Floresta</b><span>10.458 hab.</span></button>
       <button class="rmm-city" data-slug="iguaracu"><img src="rmm/brasoes/iguaracu.webp" alt="Brasão de Iguaraçu" width="44" height="44" loading="lazy"><b>Iguaraçu</b><span>5.338 hab.</span></button>
       <button class="rmm-city" data-slug="ivatuba"><img src="rmm/brasoes/ivatuba.webp" alt="Brasão de Ivatuba" width="44" height="44" loading="lazy"><b>Ivatuba</b><span>2.708 hab.</span></button>
+      <button class="rmm-city" data-slug="mandaguacu"><img src="rmm/brasoes/mandaguacu.webp" alt="Brasão de Mandaguaçu" width="44" height="44" loading="lazy"><b>Mandaguaçu</b><span>31.457 hab.</span></button>
+      <button class="rmm-city" data-slug="mandaguari"><img src="rmm/brasoes/mandaguari.webp" alt="Brasão de Mandaguari" width="44" height="44" loading="lazy"><b>Mandaguari</b><span>36.716 hab.</span></button>
+      <button class="rmm-city" data-slug="marialva"><img src="rmm/brasoes/marialva.webp" alt="Brasão de Marialva" width="44" height="44" loading="lazy"><b>Marialva</b><span>41.851 hab.</span></button>
+      <button class="rmm-city" data-slug="maringa"><img src="rmm/brasoes/maringa.webp" alt="Brasão de Maringá" width="44" height="44" loading="lazy"><b>Maringá</b><span>409.657 hab.</span></button>
+      <button class="rmm-city" data-slug="paicandu"><img src="rmm/brasoes/paicandu.webp" alt="Brasão de Paiçandu" width="44" height="44" loading="lazy"><b>Paiçandu</b><span>45.962 hab.</span></button>
+      <button class="rmm-city" data-slug="sarandi"><img src="rmm/brasoes/sarandi.webp" alt="Brasão de Sarandi" width="44" height="44" loading="lazy"><b>Sarandi</b><span>118.455 hab.</span></button>
     </div>
     <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 6 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
   </div>
@@ -916,28 +916,28 @@
     const REG_RMM = 'Paraná · Região Metropolitana de Maringá';
     const REG_SP  = 'São Paulo · Região Noroeste do Estado de São Paulo';
     const CID = {
-      maringa:    {n:'Maringá',        f:'Maringa',        ibge:'4115200', p22:409657, p25:429660, area:487.012, dens:841.16,  pib:22655738, mb:'3,9',
-                   perfil:'Cidade-polo da região: concentra 56% da população dos 11 municípios e a maior malha urbana, com 841 habitantes por km².'},
-      sarandi:    {n:'Sarandi',        f:'Sarandi',        ibge:'4126256', p22:118455, p25:128106, area:103.501, dens:1144.48, pib:2072735,  mb:'4,6',
-                   perfil:'A maior densidade demográfica da lista: 1.144 habitantes por km² em apenas 103 km² — cidade compacta e conurbada a Maringá.'},
-      paicandu:   {n:'Paiçandu',       f:'Paicandu',       ibge:'4117503', p22:45962,  p25:48695,  area:171.379, dens:268.19,  pib:1057696,  mb:'4,7',
-                   perfil:'Conurbada a Maringá, com 268 hab/km² e crescimento de 5,9% entre o Censo 2022 e a estimativa de 2025.'},
-      marialva:   {n:'Marialva',       f:'Marialva',       ibge:'4114807', p22:41851,  p25:44749,  area:475.564, dens:88.00,   pib:2654433,  mb:'4,8',
-                   perfil:'Território extenso (476 km²) e o segundo maior PIB da lista: demanda urbana e rural convivem, e o deslocamento das equipes pesa no tempo de resposta.'},
-      mandaguari: {n:'Mandaguari',     f:'Mandaguari',     ibge:'4114203', p22:36716,  p25:38313,  area:335.814, dens:109.33,  pib:1835706,  mb:'4,9',
-                   perfil:'36,7 mil habitantes em 336 km², com PIB de R$ 1,8 bilhão — um dos maiores da região fora de Maringá.'},
-      mandaguacu: {n:'Mandaguaçu',     f:'Mandaguacu',     ibge:'4114104', p22:31457,  p25:34521,  area:294.019, dens:106.99,  pib:687733,   mb:'4,8',
-                   perfil:'Cresceu 9,7% entre o Censo 2022 e a estimativa de 2025 — o segundo maior avanço proporcional entre os 11 municípios.'},
       astorga:    {n:'Astorga',        f:'Astorga',        ibge:'4102109', p22:25475,  p25:26203,  area:434.792, dens:58.59,   pib:882920,   mb:'4,6',
                    perfil:'Um dos maiores territórios da região (435 km²) para 25,5 mil habitantes: sede urbana compacta e grande área rural a atender.'},
-      floresta:   {n:'Floresta',       f:'Floresta',       ibge:'4107900', p22:10458,  p25:11522,  area:158.226, dens:66.10,   pib:271124,   mb:'5,2',
-                   perfil:'O maior crescimento proporcional da lista: +10,2% entre o Censo 2022 e a estimativa de 2025, chegando a 11,5 mil habitantes.'},
       drcamargo:  {n:'Doutor Camargo', f:'Doutor-Camargo', ibge:'4107306', p22:6327,   p25:6517,   area:118.279, dens:53.49,   pib:200365,   mb:'4,9',
                    perfil:'Município de pequeno porte (6,3 mil habitantes em 118 km²), onde cada demanda registrada tem peso alto no indicador da gestão.'},
+      floresta:   {n:'Floresta',       f:'Floresta',       ibge:'4107900', p22:10458,  p25:11522,  area:158.226, dens:66.10,   pib:271124,   mb:'5,2',
+                   perfil:'O maior crescimento proporcional da lista: +10,2% entre o Censo 2022 e a estimativa de 2025, chegando a 11,5 mil habitantes.'},
       iguaracu:   {n:'Iguaraçu',       f:'Iguaracu',       ibge:'4110003', p22:5338,   p25:5693,   area:164.983, dens:32.35,   pib:212505,   mb:'5,0',
                    perfil:'5,3 mil habitantes em 165 km²: baixa densidade (32,4 hab/km²) e forte componente rural na demanda por serviços.'},
       ivatuba:    {n:'Ivatuba',        f:'Ivatuba',        ibge:'4111605', p22:2708,   p25:2685,   area:96.661,  dens:28.02,   pib:143593,   mb:'5,3',
                    perfil:'O menor município da lista — 2,7 mil habitantes em 97 km² — e o único cuja estimativa de 2025 ficou abaixo do Censo 2022.'},
+      mandaguacu: {n:'Mandaguaçu',     f:'Mandaguacu',     ibge:'4114104', p22:31457,  p25:34521,  area:294.019, dens:106.99,  pib:687733,   mb:'4,8',
+                   perfil:'Cresceu 9,7% entre o Censo 2022 e a estimativa de 2025 — o segundo maior avanço proporcional entre os 11 municípios.'},
+      mandaguari: {n:'Mandaguari',     f:'Mandaguari',     ibge:'4114203', p22:36716,  p25:38313,  area:335.814, dens:109.33,  pib:1835706,  mb:'4,9',
+                   perfil:'36,7 mil habitantes em 336 km², com PIB de R$ 1,8 bilhão — um dos maiores da região fora de Maringá.'},
+      marialva:   {n:'Marialva',       f:'Marialva',       ibge:'4114807', p22:41851,  p25:44749,  area:475.564, dens:88.00,   pib:2654433,  mb:'4,8',
+                   perfil:'Território extenso (476 km²) e o segundo maior PIB da lista: demanda urbana e rural convivem, e o deslocamento das equipes pesa no tempo de resposta.'},
+      maringa:    {n:'Maringá',        f:'Maringa',        ibge:'4115200', p22:409657, p25:429660, area:487.012, dens:841.16,  pib:22655738, mb:'3,9',
+                   perfil:'Cidade-polo da região: concentra 56% da população dos 11 municípios e a maior malha urbana, com 841 habitantes por km².'},
+      paicandu:   {n:'Paiçandu',       f:'Paicandu',       ibge:'4117503', p22:45962,  p25:48695,  area:171.379, dens:268.19,  pib:1057696,  mb:'4,7',
+                   perfil:'Conurbada a Maringá, com 268 hab/km² e crescimento de 5,9% entre o Censo 2022 e a estimativa de 2025.'},
+      sarandi:    {n:'Sarandi',        f:'Sarandi',        ibge:'4126256', p22:118455, p25:128106, area:103.501, dens:1144.48, pib:2072735,  mb:'4,6',
+                   perfil:'A maior densidade demográfica da lista: 1.144 habitantes por km² em apenas 103 km² — cidade compacta e conurbada a Maringá.'},
 
       /* Região Noroeste do Estado de São Paulo */
       aracatuba:  {n:'Araçatuba',      f:'Aracatuba',      ibge:'3502804', p22:200124, p25:208415, area:1167.126, dens:171.47, pib:9017953,  mb:'3,8', d:'sp',
