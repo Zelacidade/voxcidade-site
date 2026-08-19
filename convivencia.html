@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1054A8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Manual de Boa Convivência — VoxCidade</title>
+  <meta name="description" content="Manual de Boa Convivência do VoxCidade: princípios da comunidade, o que é incentivado, o que não é permitido, os cartões e o direito de defesa. Versão 1.3 — 19 de agosto de 2026.">
+  <link rel="canonical" href="https://voxcidade.com.br/convivencia.html">
+
+<style>
+  :root {
+    --azul:#1054A8; --azul2:#1976D2; --azulbg:#E8F4FD;
+    --amarelo:#F5A800; --escuro:#0D1B2A; --cinza:#5A6A7A;
+    --claro:#F7FAFD; --branco:#FFFFFF;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--branco);color:var(--escuro);overflow-x:hidden}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 2px 24px rgba(16,84,168,0.08)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-logo img{width:42px;height:42px;object-fit:contain}
+  .nav-logo{flex-shrink:0}
+  .nav-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:var(--azul);letter-spacing:-0.5px}
+  .nav-links{display:flex;gap:16px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--azul);font-weight:600;font-size:14px;white-space:nowrap;transition:color .2s}
+  .nav-cta{flex-shrink:0}
+  .nav-links a:hover{color:var(--amarelo)}
+  .nav-cta{background:var(--azul);color:#fff;border-radius:50px;padding:10px 24px;font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s}
+  .nav-cta:hover{background:var(--azul2);transform:translateY(-1px)}
+  .nav-burger{display:none;background:none;border:none;font-size:24px;line-height:1;color:var(--azul);cursor:pointer;padding:4px 8px}
+  .nav-so-mobile{display:none}
+  .page-hero{background:linear-gradient(135deg,#0D1B2A 0%,#1054A8 100%);padding:140px 48px 80px;text-align:center}
+  .page-hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:12px}
+  .page-hero p{font-size:18px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto}
+  .page-content{max-width:860px;margin:0 auto;padding:72px 48px 100px}
+  .page-content h2{font-family:'Fraunces',serif;font-weight:700;font-size:26px;color:var(--azul);margin:48px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--azulbg)}
+  .page-content h2:first-child{margin-top:0}
+  .page-content h3{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--escuro);margin:28px 0 10px}
+  .page-content p{font-size:16px;line-height:1.78;color:#444;margin-bottom:14px}
+  .page-content ul{padding-left:24px;margin-bottom:16px}
+  .page-content ul li{font-size:16px;line-height:1.72;color:#444;margin-bottom:6px}
+  .page-content strong{color:var(--escuro);font-weight:600}
+  .page-content .atualizado{display:inline-block;background:var(--azulbg);color:var(--azul);border-radius:50px;padding:6px 16px;font-size:13px;font-weight:600;margin-bottom:32px}
+  .page-content .destaque-box{background:var(--azulbg);border-left:4px solid var(--azul);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;font-size:15px;color:var(--escuro);line-height:1.7}
+  footer{background:var(--escuro);color:rgba(255,255,255,0.4);padding:48px;text-align:center}
+  .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+  .footer-logo img{width:36px}
+  .footer-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:#fff}
+  .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;list-style:none}
+  .footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-links a:hover{color:var(--amarelo)}
+  .footer-copy{font-size:13px}
+  @media(max-width:900px){
+    nav{padding:14px 24px}
+    .nav-burger{display:block}
+    .nav-cta{display:none}
+    .nav-so-mobile{display:block}
+    .nav-so-desktop{display:none}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:6px 24px 14px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 24px rgba(16,84,168,0.1)}
+    .nav-links.open{display:flex}
+    .nav-links a{display:block;padding:11px 0;font-size:16px}
+  }
+  @media(max-width:768px){.page-hero{padding:110px 24px 60px}.page-content{padding:48px 24px 72px}}
+  .footer-social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+  .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,0.35);border-radius:50%;color:rgba(255,255,255,0.55);transition:color .2s,border-color .2s,transform .2s}
+  .footer-social a:hover{color:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px;fill:currentColor}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#como">Como funciona</a></li>
+    <li><a href="index.html#bene">Benefícios</a></li>
+    <li><a href="index.html#app">Conheça o app</a></li>
+    <li><a href="index.html#gami">Gamificação</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="prefeituras.html#rmm" title="Municípios Selecionados da Região Metropolitana de Maringá">RMM</a></li>
+    <li><a href="prefeituras.html#sp" title="Municípios Selecionados da Região Noroeste do Estado de São Paulo">SP</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual</a></li>
+    <li class="nav-so-desktop"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-desktop"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="termos.html">Termos de Uso</a></li>
+    <li class="nav-so-mobile"><a href="privacidade.html">Política de Privacidade</a></li>
+    <li class="nav-so-mobile"><a href="sobre.html">Sobre o App</a></li>
+    <li class="nav-so-mobile"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-mobile"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="index.html#download">⬇ Baixar app</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Baixar app</a>
+  <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</nav>
+<div class="page-hero">
+  <h1>Manual de Boa Convivência</h1>
+  <p>Como participar do VoxCidade com respeito, segurança e responsabilidade</p>
+</div>
+<div class="page-content">
+  <span class="atualizado">📅 Última atualização: 19 de agosto de 2026 — Versão 1.3</span>
+
+  <div class="destaque-box">Este Manual acompanha os <strong>Termos de Uso 1.3</strong> e a <strong>Política de Privacidade 1.3</strong>. Ele explica, em linguagem simples, como conviver bem no VoxCidade. Em caso de divergência entre este texto e os Termos de Uso, <strong>prevalecem os Termos</strong>, que são o documento contratual. Onde encontrar: <strong>Meu Perfil › Conta e privacidade</strong>, junto da Política de Privacidade e dos Termos de Uso.</div>
+  <h2>1. Apresentação</h2>
+  <p>O <strong>VoxCidade</strong> é um espaço de participação, diálogo e construção coletiva. Para que todos possam expressar suas opiniões com liberdade e segurança, é importante que as interações sejam baseadas no respeito, na responsabilidade e na boa-fé.</p>
+  <p>Este Manual estabelece princípios e orientações para uma convivência saudável entre usuários, comunidades, representantes públicos, organizações e demais participantes da plataforma.</p>
+  <p><strong>No VoxCidade, na prática:</strong> você registra solicitações sobre a sua cidade — um buraco na rua, uma lâmpada apagada, um entulho abandonado —, acompanha o andamento delas pela Linha do Tempo, responde pesquisas de opinião do município e recebe avisos da prefeitura. Este Manual vale para tudo isso.</p>
+  <h2>2. Princípios da comunidade</h2>
+  <p>No VoxCidade, valorizamos:</p>
+  <ul>
+    <li><strong>Respeito:</strong> trate as outras pessoas como gostaria de ser tratado.</li>
+    <li><strong>Liberdade de expressão:</strong> opiniões, críticas e divergências são bem-vindas, desde que respeitem os limites deste Manual.</li>
+    <li><strong>Responsabilidade:</strong> publique informações e manifestações de forma consciente.</li>
+    <li><strong>Diálogo:</strong> procure compreender diferentes pontos de vista antes de responder.</li>
+    <li><strong>Transparência:</strong> deixe claro quando estiver compartilhando opinião, experiência pessoal ou informação não confirmada.</li>
+    <li><strong>Inclusão:</strong> contribua para um ambiente em que diferentes pessoas possam participar sem sofrer discriminação ou intimidação.</li>
+    <li><strong>Interesse coletivo:</strong> utilize a plataforma para contribuir para debates e soluções que beneficiem a comunidade.</li>
+  </ul>
+  <h2>3. O que é incentivado</h2>
+  <p>Os usuários são convidados a:</p>
+  <ul>
+    <li>Apresentar propostas, sugestões e críticas construtivas.</li>
+    <li>Debater políticas públicas, serviços, problemas locais e assuntos de interesse da comunidade.</li>
+    <li>Compartilhar experiências relevantes para o debate.</li>
+    <li>Fazer perguntas e buscar esclarecimentos.</li>
+    <li>Discordar de ideias sem atacar as pessoas.</li>
+    <li>Conferir informações antes de divulgá-las.</li>
+    <li>Utilizar linguagem clara e respeitosa.</li>
+    <li>Denunciar conteúdos que violem este Manual.</li>
+  </ul>
+  <p><strong>No VoxCidade, isso também significa:</strong></p>
+  <ul>
+    <li>Registrar a solicitação <strong>no local certo do mapa</strong> — a posição é o que permite à equipe encontrar o problema.</li>
+    <li>Descrever o que se vê <strong>com objetividade</strong>: "buraco de cerca de um metro na faixa da direita" ajuda mais do que "a rua está um horror".</li>
+    <li>Anexar <strong>foto do problema</strong>, não das pessoas.</li>
+    <li>Responder às <strong>pesquisas de opinião</strong> do município: elas são anônimas e ajudam a definir prioridades.</li>
+    <li>Acompanhar o andamento pela <strong>Linha do Tempo</strong> antes de registrar de novo.</li>
+  </ul>
+  <h2>4. O que não é permitido</h2>
+  <p>Não são permitidos conteúdos ou comportamentos que envolvam:</p>
+  <h3>4.1. Ofensas e ataques pessoais</h3>
+  <p>Não utilize a plataforma para humilhar, insultar, ameaçar, perseguir ou constranger outras pessoas.</p>
+  <p>Críticas a ideias, decisões, projetos ou agentes públicos são permitidas. Ataques pessoais, porém, não são necessários para fazer uma crítica legítima.</p>
+  <h3>4.2. Discriminação e discurso de ódio</h3>
+  <p>É proibido atacar, desumanizar ou incentivar violência contra pessoas ou grupos com base em características protegidas, como raça, cor, origem, nacionalidade, religião, deficiência, gênero ou outras características pessoais.</p>
+  <h3>4.3. Ameaças e incitação à violência</h3>
+  <p>Ameaças, incentivo à violência, celebração de atos violentos ou chamadas para agressão contra pessoas ou grupos não serão tolerados.</p>
+  <h3>4.4. Assédio e perseguição</h3>
+  <p>Não use o VoxCidade para perseguir, intimidar, constranger ou importunar repetidamente outra pessoa.</p>
+  <p>Também não é permitido organizar ataques coletivos contra usuários, autoridades, organizações ou grupos.</p>
+  <h3>4.5. Desinformação e manipulação</h3>
+  <p>Evite apresentar como fato aquilo que não foi verificado.</p>
+  <p>Não utilize a plataforma deliberadamente para fabricar, manipular ou disseminar informações falsas com potencial de causar dano.</p>
+  <p>Quando uma informação for incerta, indique essa condição claramente.</p>
+  <h3>4.6. Exposição indevida de dados pessoais</h3>
+  <p>Não publique dados pessoais de terceiros sem autorização, especialmente informações que possam colocar alguém em risco.</p>
+  <p>Isso inclui, por exemplo:</p>
+  <ul>
+    <li>Endereço residencial;</li>
+    <li>Número de telefone pessoal;</li>
+    <li>Documentos de identificação;</li>
+    <li>Dados financeiros;</li>
+    <li>Senhas ou credenciais;</li>
+    <li>Informações pessoais obtidas de forma privada.</li>
+  </ul>
+  <p><strong>Atenção especial no VoxCidade:</strong> a foto e a descrição da sua solicitação podem ser vistas por outros usuários do seu município no <strong>Mapa do Município</strong>. Antes de enviar, confira se a imagem não mostra <strong>rostos, placas de veículos, documentos, números de casa que identifiquem uma família ou o interior de uma residência</strong>. Fotografe o problema, não as pessoas.</p>
+  <h3>4.7. Conteúdo ilegal ou perigoso</h3>
+  <p>Não utilize o VoxCidade para organizar, incentivar ou facilitar atividades ilegais, violência ou outras condutas que possam colocar pessoas em risco.</p>
+  <h3>4.8. Spam e manipulação da plataforma</h3>
+  <p>Não é permitido:</p>
+  <ul>
+    <li>Publicar repetidamente o mesmo conteúdo para dominar uma discussão;</li>
+    <li>Criar interações artificiais para manipular opiniões ou métricas;</li>
+    <li>Utilizar contas falsas para enganar outros usuários;</li>
+    <li>Automatizar ações de forma abusiva;</li>
+    <li>Promover campanhas coordenadas de assédio.</li>
+  </ul>
+  <p><strong>No VoxCidade:</strong> registrar a <strong>mesma solicitação várias vezes</strong> não acelera o atendimento — atrapalha, porque divide o histórico e ocupa a fila da equipe. Se algo mudou, acompanhe pela Linha do Tempo ou registre uma solicitação nova apenas quando for um <strong>problema diferente</strong>.</p>
+  <h3>4.9. Publicidade e promoção indevida</h3>
+  <p>Conteúdos comerciais ou promocionais devem respeitar as regras específicas do VoxCidade. Não utilize discussões comunitárias para realizar spam ou publicidade enganosa.</p>
+  <h3>4.10. Solicitações falsas ou fora de finalidade</h3>
+  <p>Não registre problemas inexistentes, nem informe local diferente do real de forma intencional.</p>
+  <p>O VoxCidade também não é canal para assuntos particulares entre vizinhos, disputas privadas ou pedidos que não digam respeito a um serviço público municipal. Para emergências — risco à vida, crime em andamento, incêndio —, <strong>acione os serviços de emergência</strong>; o aplicativo não substitui a Polícia, o SAMU nem os Bombeiros.</p>
+  <h2>5. Discordar faz parte</h2>
+  <p>O VoxCidade não exige que os usuários concordem entre si.</p>
+  <p>Uma boa discussão pode conter opiniões completamente diferentes. O importante é manter o foco nas ideias e evitar ataques pessoais.</p>
+  <p><strong>Em vez de:</strong></p>
+  <p>"Você não entende nada desse assunto."</p>
+  <p><strong>Prefira:</strong></p>
+  <p>"Discordo dessa proposta porque acredito que ela pode gerar estes impactos: ..."</p>
+  <h2>6. Compartilhamento de informações</h2>
+  <p>Antes de publicar uma informação importante:</p>
+  <ol>
+    <li>1. Verifique a fonte.</li>
+    <li>2. Confira a data e o contexto.</li>
+    <li>3. Evite retirar frases ou dados do contexto original.</li>
+    <li>4. Diferencie fatos de opiniões.</li>
+    <li>5. Corrija eventuais erros quando identificados.</li>
+  </ol>
+  <p>Conteúdos de interesse público merecem especial cuidado, principalmente quando possam afetar a reputação, a segurança ou as decisões de outras pessoas.</p>
+  <h2>7. Privacidade e segurança</h2>
+  <p>Proteja seus próprios dados e respeite a privacidade dos demais usuários.</p>
+  <p>Se uma publicação expuser informações pessoais, documentos ou outros dados sensíveis de maneira indevida, utilize os mecanismos de denúncia da plataforma.</p>
+  <p><strong>Cuidando da sua conta:</strong></p>
+  <ul>
+    <li>Use uma senha que você não repita em outros serviços e <strong>não empreste sua conta</strong> — o que for enviado por ela é de sua responsabilidade.</li>
+    <li>O VoxCidade <strong>nunca</strong> pede sua senha por telefone, e-mail ou WhatsApp.</li>
+    <li>Comunicados oficiais do município chegam <strong>dentro do aplicativo</strong> — pelos avisos, pelas notificações e pelo <strong>Histórico de Mensagens</strong>. Desconfie de mensagem que se diz do VoxCidade fora daí.</li>
+    <li>Ao usar o <strong>registro por voz</strong>, a conversão da fala em texto é feita pelo próprio aparelho: <strong>nenhum áudio é gravado ou enviado</strong>. Só o texto vai para a prefeitura.</li>
+    <li>Você pode <strong>excluir sua conta</strong> a qualquer momento em Meu Perfil, e exercer seus direitos de titular de dados pelos canais indicados na Política de Privacidade.</li>
+  </ul>
+  <h2>8. Como denunciar</h2>
+  <p>Ao encontrar conteúdo ou comportamento que pareça violar este Manual:</p>
+  <ul>
+    <li>Utilize a ferramenta de denúncia disponível no VoxCidade.</li>
+    <li>Explique, quando possível, qual regra foi violada.</li>
+    <li>Evite iniciar uma discussão agressiva com o autor do conteúdo.</li>
+    <li>Não utilize denúncias falsas para silenciar opiniões das quais você discorda.</li>
+  </ul>
+  <p><strong>Discordar de uma opinião, por si só, não significa que ela deva ser denunciada.</strong></p>
+  <p>Se preferir, escreva para <strong><a href="mailto:contato@voxcidade.com.br" style="color:var(--azul)">contato@voxcidade.com.br</a></strong> descrevendo o caso.</p>
+  <h2>9. Como as denúncias podem ser tratadas</h2>
+  <p>O VoxCidade poderá analisar denúncias e adotar medidas proporcionais à gravidade e à recorrência da conduta.</p>
+  <p>Dependendo do caso, as medidas poderão incluir:</p>
+  <ul>
+    <li>Orientação ou aviso ao usuário;</li>
+    <li>Remoção ou limitação de conteúdo;</li>
+    <li>Restrição temporária de determinadas funcionalidades;</li>
+    <li>Suspensão temporária da conta;</li>
+    <li>Suspensão ou encerramento da conta em casos graves ou recorrentes;</li>
+    <li>Encaminhamento às autoridades competentes quando houver obrigação legal ou situação que justifique essa medida.</li>
+  </ul>
+  <p>Sempre que possível, as decisões devem considerar o contexto, a gravidade da violação, a recorrência e o potencial de dano.</p>
+  <h2>9-A. Como isso funciona hoje, na prática: os cartões</h2>
+  <p>A lista acima descreve o que <strong>pode</strong> ser adotado. Hoje, o VoxCidade aplica um regime simples, escrito na <strong>Cláusula 4 dos Termos de Uso</strong> e inspirado no futebol:</p>
+  <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+    <thead><tr><th style="text-align:left;padding:10px;border-bottom:2px solid var(--azul);color:var(--azul)"></th><th style="text-align:left;padding:10px;border-bottom:2px solid var(--azul);color:var(--azul)">O que é</th><th style="text-align:left;padding:10px;border-bottom:2px solid var(--azul);color:var(--azul)">O que acontece</th></tr></thead>
+    <tbody>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">🟨 <strong>Cartão amarelo</strong></td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Advertência formal por conduta de menor gravidade</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Não bloqueia nada. É um aviso, com o motivo indicado</td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">🟥 <strong>Cartão vermelho</strong></td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Conduta grave: discurso de ódio, perfil falso, ameaça, fraude ou assédio</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Encerra a conta <strong>imediatamente</strong>, sem advertência anterior</td></tr>
+    </tbody></table>
+  <p><strong>As regras do acúmulo:</strong></p>
+  <ul>
+    <li><strong>3 advertências valendo ao mesmo tempo encerram a conta.</strong></li>
+    <li>Cada advertência <strong>deixa de contar 6 meses</strong> depois de aplicada. Ela permanece registrada no histórico, mas não conta mais para o total.</li>
+    <li>O encerramento vale para <strong>todo o VoxCidade</strong>, e não apenas para o seu município.</li>
+    <li>Quem tem a conta encerrada <strong>não consegue se cadastrar de novo com o mesmo e-mail</strong>. Criar outra conta para contornar a medida é, por si só, uma violação destes princípios.</li>
+    <li><strong>Suas solicitações não são apagadas.</strong> O buraco na rua continua sendo um problema da cidade: o que você registrou permanece e segue sendo tratado pela prefeitura.</li>
+  </ul>
+  <p><strong>Quem aplica:</strong> um servidor da administração municipal, identificado, que precisa escolher o motivo e descrever o caso por escrito. <strong>Nenhuma medida é automática</strong> — não há robô decidindo, e todo registro fica em log de auditoria.</p>
+  <h2>9-B. Sua defesa: o que fazer se você discorda</h2>
+  <p>Você não fica sem resposta.</p>
+  <ol>
+    <li>1. Abra <strong>Meu Perfil › Minha Conduta</strong>. Lá aparece cada medida aplicada à sua conta, com o <strong>motivo</strong>, a descrição do caso, <strong>quem aplicou</strong>, a data e até quando ela conta.</li>
+    <li>2. Toque em <strong>Apresentar defesa</strong> e escreva o seu lado. É uma defesa por medida.</li>
+    <li>3. A administração municipal recebe a defesa e <strong>responde</strong>: pode <strong>acolher</strong> — e aí a medida é retirada — ou <strong>manter</strong>, explicando por quê.</li>
+    <li>4. Você recebe a resposta no aplicativo, dentro da própria tela Minha Conduta.</li>
+    <li>5. Se a medida retirada era a que havia encerrado sua conta, <strong>o acesso é restabelecido</strong>.</li>
+  </ol>
+  <p>Também é possível escrever para <strong><a href="mailto:contato@voxcidade.com.br" style="color:var(--azul)">contato@voxcidade.com.br</a></strong>, informando o e-mail do cadastro.</p>
+  <h2>10. Críticas ao poder público e interesse cidadão</h2>
+  <p>O VoxCidade deve ser um espaço legítimo para questionar governos, órgãos públicos, autoridades e serviços.</p>
+  <p>Críticas firmes, manifestações de insatisfação e denúncias de problemas de interesse público são compatíveis com a boa convivência quando apresentadas de maneira responsável.</p>
+  <p><strong>Criticar uma instituição ou uma decisão não é o mesmo que atacar uma pessoa.</strong></p>
+  <h3>10-A. O que <strong>não</strong> é infração</h3>
+  <p>Para que ninguém deixe de participar por medo, fica registrado: <strong>não</strong> gera advertência</p>
+  <ul>
+    <li>criticar a prefeitura, uma secretaria, uma obra ou uma decisão administrativa;</li>
+    <li>reclamar da demora no atendimento de uma solicitação;</li>
+    <li>discordar publicamente de um agente público;</li>
+    <li>registrar um problema que a prefeitura considere pequeno;</li>
+    <li>insistir, com educação, para que um problema real seja resolvido;</li>
+    <li>errar o local ou a categoria da solicitação <strong>sem intenção</strong>.</li>
+  </ul>
+  <p>O que gera medida é <strong>como</strong> se fala e <strong>o que</strong> se publica — ofensa pessoal, mentira deliberada, exposição de terceiros —, nunca o fato de cobrar o poder público.</p>
+  <h2>11. Participação de agentes públicos e organizações</h2>
+  <p>Representantes públicos, instituições, empresas, organizações sociais e demais entidades também devem participar respeitando as mesmas regras de convivência.</p>
+  <p>A posição ou função de uma pessoa não a torna imune a críticas, nem autoriza tratamento abusivo por parte dos demais usuários.</p>
+  <p><strong>Do lado da administração</strong>, os servidores que usam o VoxCidade respondem pelas mesmas regras: o Controle de Conduta registra <strong>quem</strong> aplicou cada medida, o motivo e a data, e tudo fica em auditoria. A ferramenta existe para proteger a convivência, não para silenciar quem cobra.</p>
+  <h2>12. Crianças e adolescentes</h2>
+  <p>Conteúdos envolvendo crianças e adolescentes devem receber atenção especial. Não publique informações que possam expor menores a riscos, constrangimento, exploração ou identificação indevida.</p>
+  <p>O cadastro no VoxCidade é destinado a <strong>maiores de 18 anos</strong>. Fotografias de solicitações não devem exibir crianças ou adolescentes identificáveis.</p>
+  <h2>13. Dicas para uma boa conversa</h2>
+  <p>Antes de publicar, pergunte a si mesmo:</p>
+  <ul>
+    <li>Minha mensagem contribui para a discussão?</li>
+    <li>Estou criticando uma ideia ou atacando uma pessoa?</li>
+    <li>Tenho certeza de que a informação está correta?</li>
+    <li>Estou respeitando a privacidade de terceiros?</li>
+    <li>Eu diria isso da mesma maneira em uma conversa presencial?</li>
+    <li>Minha publicação pode colocar alguém em risco?</li>
+  </ul>
+  <p>Se a resposta for "não", vale a pena revisar a mensagem antes de publicá-la.</p>
+  <p><strong>E antes de enviar uma solicitação:</strong></p>
+  <ul>
+    <li>A foto mostra o <strong>problema</strong>, e não pessoas, placas ou documentos?</li>
+    <li>O ponto no mapa é o <strong>lugar certo</strong>?</li>
+    <li>A descrição explica o que a equipe vai encontrar quando chegar lá?</li>
+    <li>Já existe uma solicitação minha sobre isso na Linha do Tempo?</li>
+  </ul>
+  <h2>14. Regra de ouro</h2>
+  <p><strong>No VoxCidade, participe como cidadão, discuta como vizinho e respeite como comunidade.</strong></p>
+  <p>A diversidade de opiniões fortalece o debate público. O respeito é o que torna esse debate possível.</p>
+  <h2>15. Perguntas frequentes</h2>
+  <p><strong>Levei uma advertência. Perco meus pontos?</strong></p>
+  <p>Não. A pontuação e as conquistas continuam como estão; a advertência é registro de conduta, não de desempenho.</p>
+  <p><strong>Quanto tempo dura uma advertência?</strong></p>
+  <p>Ela deixa de contar <strong>6 meses</strong> depois de aplicada. O registro continua no histórico, mas não soma mais para o encerramento.</p>
+  <p><strong>Minha conta foi encerrada. Posso criar outra?</strong></p>
+  <p>Não com o mesmo e-mail, que fica bloqueado. E criar outra conta para contornar a medida é violação destes princípios. O caminho certo é apresentar defesa.</p>
+  <p><strong>As minhas solicitações somem se eu for penalizado?</strong></p>
+  <p>Não. Elas dizem respeito à cidade, e não a você; permanecem registradas e continuam sendo tratadas.</p>
+  <p><strong>Quem vê as minhas advertências?</strong></p>
+  <p>Apenas você e os administradores do seu município. Elas <strong>não</strong> aparecem no Mapa do Município nem para outros usuários.</p>
+  <p><strong>Fui penalizado por engano. E agora?</strong></p>
+  <p>Use <strong>Meu Perfil › Minha Conduta › Apresentar defesa</strong>. A administração é obrigada a responder, e pode retirar a medida.</p>
+  <p><strong>Quem decide: uma pessoa ou o sistema?</strong></p>
+  <p>Sempre uma pessoa. Nenhuma medida do VoxCidade é aplicada automaticamente.</p>
+  <h2>16. Onde encontrar cada coisa</h2>
+  <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+    <thead><tr><th style="text-align:left;padding:10px;border-bottom:2px solid var(--azul);color:var(--azul)">Assunto</th><th style="text-align:left;padding:10px;border-bottom:2px solid var(--azul);color:var(--azul)">Onde</th></tr></thead>
+    <tbody>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Suas medidas e sua defesa</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Meu Perfil › <strong>Minha Conduta</strong></td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Este Manual</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Meu Perfil › Conta e privacidade › <strong>Manual de Boa Convivência</strong></td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Termos de Uso e Política de Privacidade</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Meu Perfil › Conta e privacidade</td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Andamento das suas solicitações</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top"><strong>Linha do Tempo</strong></td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Avisos e comunicados do município</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top"><strong>Histórico de Mensagens</strong></td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Exclusão de conta</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Meu Perfil › Conta e privacidade</td></tr>
+      <tr><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top">Fale com a gente</td><td style="padding:10px;border-bottom:1px solid #E6EEF7;vertical-align:top"><strong><a href="mailto:contato@voxcidade.com.br" style="color:var(--azul)">contato@voxcidade.com.br</a></strong></td></tr>
+    </tbody></table>
+  <h2>17. Atualização do Manual</h2>
+  <p>Este Manual poderá ser atualizado para acompanhar mudanças na plataforma, na legislação e nas necessidades da comunidade.</p>
+  <p>As regras devem ser interpretadas de forma coerente com os princípios de liberdade de expressão, segurança, privacidade, participação cidadã e respeito entre os usuários.</p>
+  <h3>Histórico de versões</h3>
+  <ul>
+    <li><strong>Versão 1.3 — 19 de agosto de 2026:</strong> primeira publicação dentro do aplicativo, alinhada aos Termos de Uso 1.3 e à Política de Privacidade 1.3. Acrescentados: o regime de cartões efetivamente aplicado (seção 9-A), o caminho da defesa em Minha Conduta (9-B), o que <strong>não</strong> é infração (10-A), cuidados com foto e local nas solicitações, orientações de segurança da conta, perguntas frequentes e o mapa de onde encontrar cada coisa.</li>
+  </ul>
+  <p><strong>VoxCidade — sua voz participa da cidade.</strong></p>
+  <h2>18. Próximo passo previsto</h2>
+  <p>Como próximo passo, vale transformar este manual em uma <strong>versão curta para aparecer no cadastro do usuário</strong>, com "Li e concordo" e regras essenciais em uma única tela.</p>
+
+  <p style="margin-top:48px;font-size:14px;color:#999;text-align:center">VoxCidade — Maringá, Paraná — Brasil | Este Manual acompanha os <a href="termos.html" style="color:var(--azul)">Termos de Uso</a> e a <a href="privacidade.html" style="color:var(--azul)">Política de Privacidade</a>, ambos na versão 1.3</p>
+</div>
+<footer>
+  <div class="footer-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="termos.html">Termos de Uso</a></li>
+    <li><a href="privacidade.html">Política de Privacidade</a></li>
+    <li><a href="convivencia.html">Manual de Boa Convivência</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="mailto:contato@voxcidade.com.br">contato@voxcidade.com.br</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual (Índice)</a></li>
+    <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank" title="PDF protegido — senha sob solicitação em contato@voxcidade.com.br">Manual completo 🔒</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="exclusao.html">Excluir conta</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61590583760565" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://x.com/thevoxcidade" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.flickr.com/photos/204753992@N08/" target="_blank" rel="noopener" aria-label="Flickr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.334 6.666C2.42 6.666 0 9.087 0 12c0 2.913 2.42 5.334 5.334 5.334 2.913 0 5.332-2.421 5.332-5.334 0-2.913-2.419-5.334-5.332-5.334zm13.332 0c-2.913 0-5.332 2.421-5.332 5.334 0 2.913 2.419 5.334 5.332 5.334C21.58 17.334 24 14.913 24 12c0-2.913-2.42-5.334-5.334-5.334z"/></svg></a>
+    <a href="https://www.linkedin.com/company/122743942/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://www.instagram.com/thevoxcidade/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    <a href="https://www.tiktok.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="https://www.youtube.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://www.reddit.com/user/thevoxcidade" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+  </div>
+  <p class="footer-copy">© 2026 VoxCidade. Todos os direitos reservados. — Sua cidade, sua voz. <span style="opacity:.7">Versão 1.0.179</span></p>
+</footer>
+<script>
+document.getElementById('nav').style.position='relative';
+const burger=document.getElementById('burger');
+const navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',()=>{
+  const aberto=navLinks.classList.toggle('open');
+  burger.textContent=aberto?'✕':'☰';
+  burger.setAttribute('aria-expanded',aberto);
+  burger.setAttribute('aria-label',aberto?'Fechar menu':'Abrir menu');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  burger.textContent='☰';
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Abrir menu');
+}));
+</script>
+</body>
+</html>
