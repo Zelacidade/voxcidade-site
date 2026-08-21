@@ -98,6 +98,24 @@
   .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,0.35);border-radius:50%;color:rgba(255,255,255,0.55);transition:color .2s,border-color .2s,transform .2s}
   .footer-social a:hover{color:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
   .footer-social svg{width:18px;height:18px;fill:currentColor}
+
+  /* ── Acessibilidade: quem pede MENOS MOVIMENTO no sistema recebe menos ──
+     Antes isto valia só em 2 seções do site (o #app da home e o herói da
+     prefeituras). Agora é global e cobre animação, transição e o scroll suave.
+     🪤 Duração minúscula em vez de `none`: com `none` a animação nunca roda e
+     elemento que só fica visível NO FIM dela ficaria invisível para sempre —
+     e várias seções aqui nascem em opacity:0 e são reveladas ao entrar na tela.
+     Com .01ms ela chega ao estado final instantaneamente. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      transition-delay: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
 </style>
 </head>
 <body>
