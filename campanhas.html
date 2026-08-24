@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1054A8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Campanhas nas Redes Sociais — VoxCidade</title>
+  <meta name="description" content="A campanha de lançamento do VoxCidade nas redes sociais: o vídeo institucional e as artes de todos os posts, do teaser da marca à chamada final, nos formatos feed, stories e quadrado.">
+  <link rel="canonical" href="https://voxcidade.com.br/campanhas.html">
+  <meta property="og:title" content="Campanhas nas Redes Sociais — VoxCidade">
+  <meta property="og:description" content="O vídeo institucional e as artes de todos os posts da campanha de lançamento do VoxCidade — feed, stories e quadrado.">
+  <meta property="og:image" content="https://voxcidade.com.br/og-image.png">
+  <meta property="og:url" content="https://voxcidade.com.br/campanhas.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root {
+    --azul:#1054A8; --azul2:#1976D2; --azulbg:#E8F4FD;
+    --amarelo:#F5A800; --escuro:#0D1B2A; --cinza:#5A6A7A;
+    --claro:#F7FAFD; --branco:#FFFFFF;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--branco);color:var(--escuro);overflow-x:hidden}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 2px 24px rgba(16,84,168,0.08)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+  .nav-logo img{width:42px;height:42px;object-fit:contain}
+  .nav-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:var(--azul);letter-spacing:-0.5px}
+  .nav-links{display:flex;gap:16px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--azul);font-weight:600;font-size:14px;white-space:nowrap;transition:color .2s}
+  .nav-links a:hover{color:var(--amarelo)}
+  .nav-cta{flex-shrink:0;background:var(--azul);color:#fff;border-radius:50px;padding:10px 24px;font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s}
+  .nav-cta:hover{background:var(--azul2);transform:translateY(-1px)}
+  .nav-burger{display:none;background:none;border:none;font-size:24px;line-height:1;color:var(--azul);cursor:pointer;padding:4px 8px}
+  .nav-so-mobile{display:none}
+  .page-hero{background:linear-gradient(135deg,#0D1B2A 0%,#1054A8 100%);padding:140px 48px 72px;text-align:center}
+  .page-hero .kicker{display:inline-block;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--amarelo);margin-bottom:14px}
+  .page-hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:14px}
+  .page-hero p{font-size:18px;line-height:1.6;color:rgba(255,255,255,0.62);max-width:600px;margin:0 auto}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ── Vídeo institucional ── */
+  .video-sec{padding:64px 0 24px}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 32px}
+  .sec-kicker{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul2)}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(26px,3.4vw,36px);color:var(--escuro);margin:8px 0 10px}
+  .sec-head p{font-size:16px;line-height:1.65;color:var(--cinza)}
+  .video-frame{max-width:340px;margin:0 auto;border-radius:26px;overflow:hidden;box-shadow:0 24px 60px rgba(16,84,168,0.22);background:#000;border:1px solid rgba(16,84,168,0.1)}
+  .video-frame video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+
+  /* ── Galeria de posts ── */
+  .gal-sec{padding:56px 0 40px}
+  .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px}
+  .post-card{position:relative;border:0;padding:0;margin:0;background:none;cursor:pointer;text-align:left;border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(13,27,42,0.10);transition:transform .22s,box-shadow .22s}
+  .post-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(16,84,168,0.20)}
+  .post-card:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+  .post-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .post-card .num{position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:50%;background:var(--amarelo);color:var(--escuro);font-family:'Fraunces',serif;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,0.25)}
+  .post-card .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 14px 14px 14px;background:linear-gradient(to top,rgba(6,16,30,0.92) 0%,rgba(6,16,30,0.55) 55%,transparent 100%)}
+  .post-card .cap .ch{display:block;font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--amarelo);margin-bottom:3px}
+  .post-card .cap .tt{display:block;font-family:'Fraunces',serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff}
+
+  .gal-note{text-align:center;font-size:14px;color:var(--cinza);margin-top:34px}
+  .gal-note strong{color:var(--azul)}
+
+  /* ── Lightbox ── */
+  .lb{position:fixed;inset:0;z-index:200;display:none;background:rgba(6,14,26,0.82);backdrop-filter:blur(6px);padding:24px;overflow-y:auto}
+  .lb.open{display:flex;align-items:flex-start;justify-content:center}
+  .lb-card{background:#fff;border-radius:22px;max-width:940px;width:100%;margin:auto;display:grid;grid-template-columns:minmax(0,360px) 1fr;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.4)}
+  .lb-media{background:var(--claro);padding:22px;display:flex;flex-direction:column;gap:14px;border-right:1px solid var(--azulbg)}
+  .lb-imgbox{background:#0D1B2A;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:280px}
+  .lb-imgbox img{display:block;max-width:100%;max-height:60vh;object-fit:contain}
+  .lb-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .lb-tab{border:1.5px solid var(--azulbg);background:#fff;color:var(--azul);font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;padding:7px 14px;border-radius:50px;cursor:pointer;transition:all .18s}
+  .lb-tab:hover{border-color:var(--azul2)}
+  .lb-tab.active{background:var(--azul);color:#fff;border-color:var(--azul)}
+  .lb-body{padding:26px 26px 30px;overflow-y:auto;max-height:88vh}
+  .lb-ch{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul2)}
+  .lb-title{font-family:'Fraunces',serif;font-weight:900;font-size:24px;color:var(--escuro);margin:6px 0 16px;line-height:1.15}
+  .lb-legenda{white-space:pre-wrap;font-size:15px;line-height:1.62;color:#2b3a4a;background:var(--claro);border:1px solid var(--azulbg);border-radius:12px;padding:16px 18px}
+  .lb-tags{margin-top:14px;font-size:14px;line-height:1.7;color:var(--azul);font-weight:500;word-spacing:2px}
+  .lb-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .lb-btn{display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;padding:11px 20px;border-radius:50px;text-decoration:none;transition:background .2s,transform .2s}
+  .lb-btn.pri{background:var(--azul);color:#fff}
+  .lb-btn.pri:hover{background:var(--azul2);transform:translateY(-1px)}
+  .lb-btn.sec{background:var(--azulbg);color:var(--azul)}
+  .lb-btn.sec:hover{background:#d7ebfb}
+  .lb-close{position:fixed;top:18px;right:22px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;z-index:210;transition:background .2s}
+  .lb-close:hover{background:rgba(255,255,255,0.28)}
+  .lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:0;background:rgba(255,255,255,0.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:210;transition:background .2s;display:flex;align-items:center;justify-content:center}
+  .lb-nav:hover{background:rgba(255,255,255,0.28)}
+  .lb-prev{left:18px}
+  .lb-next{right:18px}
+
+  footer{background:var(--escuro);color:rgba(255,255,255,0.4);padding:48px;text-align:center}
+  .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+  .footer-logo img{width:36px}
+  .footer-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:#fff}
+  .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;list-style:none}
+  .footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-links a:hover{color:var(--amarelo)}
+  .footer-copy{font-size:13px}
+  .footer-social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+  .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,0.35);border-radius:50%;color:rgba(255,255,255,0.55);transition:color .2s,border-color .2s,transform .2s}
+  .footer-social a:hover{color:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px;fill:currentColor}
+
+  @media(max-width:900px){
+    nav{padding:14px 24px}
+    .nav-burger{display:block}
+    .nav-cta{display:none}
+    .nav-so-mobile{display:block}
+    .nav-so-desktop{display:none}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:6px 24px 14px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 24px rgba(16,84,168,0.1)}
+    .nav-links.open{display:flex}
+    .nav-links a{display:block;padding:11px 0;font-size:16px}
+  }
+  @media(max-width:768px){
+    .page-hero{padding:110px 24px 56px}
+    .lb{padding:0}
+    .lb-card{grid-template-columns:1fr;border-radius:0;min-height:100vh}
+    .lb-media{border-right:0;border-bottom:1px solid var(--azulbg)}
+    .lb-imgbox img{max-height:52vh}
+    .lb-nav{display:none}
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      transition-delay: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#como">Como funciona</a></li>
+    <li><a href="index.html#bene">Benefícios</a></li>
+    <li><a href="index.html#app">Conheça o app</a></li>
+    <li><a href="index.html#gami">Gamificação</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="prefeituras.html#rmm" title="Municípios Selecionados da Região Metropolitana de Maringá">RMM</a></li>
+    <li><a href="prefeituras.html#sp" title="Municípios Selecionados da Região Noroeste do Estado de São Paulo">SP</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual</a></li>
+    <li class="nav-so-desktop"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-desktop"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="campanhas.html">Campanhas</a></li>
+    <li class="nav-so-mobile"><a href="termos.html">Termos de Uso</a></li>
+    <li class="nav-so-mobile"><a href="privacidade.html">Política de Privacidade</a></li>
+    <li class="nav-so-mobile"><a href="sobre.html">Sobre o App</a></li>
+    <li class="nav-so-mobile"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-mobile"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="index.html#download">⬇ Baixar app</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Baixar app</a>
+  <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</nav>
+
+<div class="page-hero">
+  <span class="kicker">Redes Sociais</span>
+  <h1>Campanhas do VoxCidade</h1>
+  <p>Toda a comunicação da nossa campanha de lançamento reunida num só lugar: o vídeo institucional e as artes de cada post, do teaser da marca à chamada final — prontas nos formatos feed, stories e quadrado.</p>
+</div>
+
+<!-- ── Vídeo institucional ── -->
+<section class="video-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Vídeo institucional</span>
+      <h2>A história do VoxCidade em 9:16</h2>
+      <p>Feito para Reels, Stories e Shorts — apresenta o app, o problema que ele resolve e o ciclo que conecta o cidadão à prefeitura, com trilha original.</p>
+    </div>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline poster="campanhas/stories/post-03.webp">
+        <source src="campanhas/video/voxcidade-apresentacao-9x16.mp4" type="video/mp4">
+        Seu navegador não reproduz este vídeo.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ── Galeria de posts ── -->
+<section class="gal-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Artes dos posts</span>
+      <h2>11 capítulos, uma só história</h2>
+      <p>Cada post é um capítulo da narrativa de lançamento. Clique em qualquer arte para ver os três formatos, ler a legenda e copiar o texto pronto para publicar.</p>
+    </div>
+    <div class="gal-grid" id="grid"></div>
+    <p class="gal-note">Handle oficial em todas as redes: <strong>@thevoxcidade</strong> &nbsp;·&nbsp; Slogan: <strong>Sua cidade, sua voz.</strong></p>
+  </div>
+</section>
+
+<!-- ── Lightbox ── -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Detalhe do post">
+  <button class="lb-close" id="lbClose" aria-label="Fechar">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Post anterior">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Próximo post">›</button>
+  <div class="lb-card">
+    <div class="lb-media">
+      <div class="lb-imgbox"><img id="lbImg" src="" alt=""></div>
+      <div class="lb-tabs">
+        <button class="lb-tab active" data-fmt="feed">Feed 4:5</button>
+        <button class="lb-tab" data-fmt="stories">Stories 9:16</button>
+        <button class="lb-tab" data-fmt="quadrado">Quadrado 1:1</button>
+      </div>
+    </div>
+    <div class="lb-body">
+      <span class="lb-ch" id="lbCh"></span>
+      <h3 class="lb-title" id="lbTitle"></h3>
+      <div class="lb-legenda" id="lbLegenda"></div>
+      <div class="lb-tags" id="lbTags"></div>
+      <div class="lb-actions">
+        <button class="lb-btn pri" id="lbCopy">📋 Copiar legenda + hashtags</button>
+        <a class="lb-btn sec" id="lbDownload" href="" download>⬇ Baixar arte</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="termos.html">Termos de Uso</a></li>
+    <li><a href="privacidade.html">Política de Privacidade</a></li>
+    <li><a href="convivencia.html">Manual de Boa Convivência</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="campanhas.html">Campanhas</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual (Índice)</a></li>
+    <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank" title="PDF protegido — senha sob solicitação em contato@voxcidade.com.br">Manual completo 🔒</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="exclusao.html">Excluir conta</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61590583760565" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://x.com/thevoxcidade" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.flickr.com/photos/204753992@N08/" target="_blank" rel="noopener" aria-label="Flickr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.334 6.666C2.42 6.666 0 9.087 0 12c0 2.913 2.42 5.334 5.334 5.334 2.913 0 5.332-2.421 5.332-5.334 0-2.913-2.419-5.334-5.332-5.334zm13.332 0c-2.913 0-5.332 2.421-5.332 5.334 0 2.913 2.419 5.334 5.332 5.334C21.58 17.334 24 14.913 24 12c0-2.913-2.42-5.334-5.334-5.334z"/></svg></a>
+    <a href="https://www.linkedin.com/company/122743942/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://www.instagram.com/thevoxcidade/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    <a href="https://www.tiktok.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="https://www.youtube.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://www.reddit.com/user/thevoxcidade" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+  </div>
+  <p class="footer-copy">© 2026 VoxCidade. Todos os direitos reservados. — Sua cidade, sua voz. <span style="opacity:.7">Versão 1.0.182</span></p>
+</footer>
+
+<script>
+/* ── Menu hambúrguer (padrão do site) ── */
+document.getElementById('nav').style.position='relative';
+const burger=document.getElementById('burger');
+const navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',()=>{
+  const aberto=navLinks.classList.toggle('open');
+  burger.textContent=aberto?'✕':'☰';
+  burger.setAttribute('aria-expanded',aberto);
+  burger.setAttribute('aria-label',aberto?'Fechar menu':'Abrir menu');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  burger.textContent='☰';
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Abrir menu');
+}));
+
+/* ── Dados dos 11 posts ── */
+const POSTS = [
+  { n:1, cap:"Teaser da marca", tt:"Toda cidade tem uma voz",
+    legenda:`🎙️ Toda cidade tem uma voz. A sua está prestes a ser ouvida.
+
+Um buraco na rua. Uma lâmpada apagada há semanas. Lixo no lugar errado.
+Você já reparou em algo na sua cidade e pensou: "alguém precisa resolver isso" — mas não soube para quem falar?
+
+Estamos construindo uma ponte direta entre quem vive a cidade e quem cuida dela.
+Nos próximos dias, vamos revelar como. 👀
+
+Fique por aqui. Isso é sobre a sua rua, o seu bairro, a sua voz.
+
+👉 Siga @thevoxcidade e ative as notificações.`,
+    tags:"#VoxCidade #MinhaCidade #CidadeInteligente #Cidadania #ParticipaçãoCidadã #Maringá #EmBreve #SuaCidadeSuaVoz" },
+
+  { n:2, cap:"O problema", tt:"O problema de sempre",
+    legenda:`😤 Reconhece essa cena?
+
+Você vê um problema na sua cidade. Quer avisar. Aí começa a novela:
+📵 Manda no WhatsApp de um grupo e se perde.
+📞 Liga e ninguém atende.
+🚶 Vai presencialmente e volta sem protocolo.
+❓ E no fim, nunca sabe se foi resolvido.
+
+O problema quase nunca é falta de vontade do cidadão — é falta de um caminho simples.
+Quando reclamar dá trabalho, a gente desiste. E a cidade perde.
+
+E se registrar um problema fosse tão fácil quanto tirar uma foto? 📸
+E se você pudesse acompanhar a resposta do começo ao fim?
+
+É exatamente sobre isso que vamos falar amanhã. 👀
+
+👉 @thevoxcidade`,
+    tags:"#VoxCidade #MinhaCidade #ProblemasUrbanos #Cidadania #GestãoPública #Participação #SuaCidadeSuaVoz #Maringá" },
+
+  { n:3, cap:"A revelação", tt:"Apresentando o VoxCidade",
+    legenda:`🎉 Chegou a hora de apresentar: este é o VoxCidade.
+
+Um aplicativo gratuito que conecta você à sua prefeitura de um jeito simples e transparente.
+
+Viu um problema na cidade? 📸 Registre em segundos, direto do celular:
+✔️ Tire uma foto
+✔️ A localização entra automaticamente
+✔️ Envie e receba um protocolo para acompanhar
+
+Do outro lado, a prefeitura recebe tudo organizado, com foto, local e categoria — o que ajuda a agir com mais rapidez e dados de verdade.
+
+Sua cidade, sua voz. E agora, um caminho direto entre as duas. 💙
+
+📲 Baixe na Google Play.
+🔗 Conheça: voxcidade.com.br
+👉 Siga @thevoxcidade.`,
+    tags:"#VoxCidade #SuaCidadeSuaVoz #CidadeInteligente #AppGratuito #Cidadania #GovTech #Maringá #ParticipaçãoCidadã" },
+
+  { n:4, cap:"Como funciona", tt:"Em 3 passos",
+    legenda:`✋ Usar o VoxCidade é mais rápido do que mandar um áudio no grupo da família.
+
+1️⃣ Registre 📸
+Tire uma foto do problema e escreva (ou fale) uma breve descrição.
+
+2️⃣ Localize 📍
+A localização é preenchida automaticamente. Sem digitar endereço.
+
+3️⃣ Acompanhe 🔔
+Você recebe um protocolo único e é notificado a cada atualização.
+
+Pronto. Em menos de 1 minuto o problema saiu da sua cabeça e chegou organizado à prefeitura. ✅
+
+Cidadania não precisa ser burocrática. 💙
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #ComoFunciona #PassoAPasso #AppGratuito #Cidadania #CidadeInteligente #SuaCidadeSuaVoz #Maringá" },
+
+  { n:5, cap:"O diferencial", tt:"Registre falando",
+    legenda:`🎤 Nem todo mundo gosta de digitar. E tudo bem.
+
+No VoxCidade, você pode registrar um problema falando. É só apertar e contar o que está acontecendo — a gente transforma sua voz em uma solicitação organizada.
+
+E tem mais: nossa inteligência artificial ajuda a entender a sua foto e a sugerir a categoria certa, para o pedido chegar mais preciso à prefeitura. 🤖
+
+Isso significa:
+✅ Mais acessível para todas as idades
+✅ Menos tempo preenchendo campos
+✅ Solicitações mais claras e mais fáceis de resolver
+
+Tecnologia de verdade servindo à sua cidade — sem complicar a sua vida. 💙
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #Acessibilidade #InteligênciaArtificial #IA #Inovação #CidadeInteligente #GovTech #SuaCidadeSuaVoz" },
+
+  { n:6, cap:"Transparência", tt:"Protocolo e linha do tempo",
+    legenda:`🔎 A pior parte de reclamar sempre foi o silêncio depois.
+
+No VoxCidade, isso acaba. Cada solicitação ganha um protocolo único e uma linha do tempo que mostra cada etapa:
+
+🟡 Registrada
+🔵 Recebida pela prefeitura
+🟠 Em análise
+🟢 Resolvida
+
+Você é notificado a cada avanço — e pode até pesquisar pelo número do protocolo a qualquer momento. Nada de "será que viram?". Você vê. 👀
+
+Transparência não é favor. É o mínimo. E é o que estamos construindo. 💙
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #Transparência #Protocolo #GestãoPública #CidadeInteligente #Cidadania #SuaCidadeSuaVoz #Maringá" },
+
+  { n:7, cap:"O ciclo completo", tt:"Da voz à ação",
+    legenda:`🔄 Um problema não termina quando você aperta "enviar". Ele percorre um ciclo — e volta até você.
+
+Veja como o VoxCidade transforma a cidade, de ponta a ponta:
+
+1️⃣ O cidadão registra — foto, voz e localização, em segundos.
+2️⃣ A prefeitura recebe — tudo organizado, direto no painel de gestão.
+3️⃣ A equipe resolve — com informação clara para agir em campo.
+4️⃣ O cidadão é avisado — notificação de conclusão, fechando o ciclo.
+
+É isso que muda o jogo: não é só "reclamar", é um fluxo transparente onde cada parte sabe o que fazer — e você acompanha do começo ao fim.
+
+A voz do cidadão. A ação da cidade. 💙
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #ComoFunciona #GestãoPública #Transparência #CidadeInteligente #GovTech #Cidadania #SuaCidadeSuaVoz #Maringá" },
+
+  { n:8, cap:"Abrangência", tt:"29 categorias",
+    legenda:`🌳🕳️ "Mas isso dá pra registrar no app?" — provavelmente, sim.
+
+O VoxCidade cobre 29 categorias de problemas urbanos. Alguns exemplos do que você pode registrar:
+
+🕳️ Buraco na via
+💡 Iluminação pública apagada
+🗑️ Lixo e limpeza urbana
+🌳 Poda e árvores
+🚦 Sinalização e trânsito
+💧 Água e esgoto
+🐕 Zoonoses
+♿ Acessibilidade
+...e muito mais.
+
+A ideia é simples: se é um problema da cidade, ele tem um lugar certo para ser ouvido. 💙
+
+Qual é o problema que MAIS te incomoda no seu bairro? Conta aqui nos comentários 👇
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #MinhaCidade #ProblemasUrbanos #Bairro #Cidadania #CidadeInteligente #SuaCidadeSuaVoz #Maringá" },
+
+  { n:9, cap:"Engajamento", tt:"Gamificação",
+    legenda:`🏅 E se cuidar da sua cidade rendesse reconhecimento?
+
+No VoxCidade, cada solicitação que você registra soma pontos e desbloqueia conquistas. É a nossa forma de dizer: quem participa, transforma — e merece ser reconhecido. 👏
+
+Não é sobre "jogar". É sobre criar o hábito de olhar pela cidade e agir, de um jeito leve e até divertido.
+
+Imagine se todo mundo do seu bairro registrasse só UM problema. Quanta coisa mudaria? 🌆
+
+Cidadania ativa também pode ter cara de conquista. 💙
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #Gamificação #CidadaniaAtiva #Engajamento #MinhaCidade #CidadeInteligente #SuaCidadeSuaVoz #Maringá" },
+
+  { n:10, cap:"Confiança", tt:"Segurança e LGPD",
+    legenda:`🔒 Falar da sua cidade não pode custar a sua privacidade.
+
+No VoxCidade, segurança não é detalhe — é fundação:
+
+🛡️ Criptografia para proteger suas informações.
+📜 Conformidade com a LGPD (Lei Geral de Proteção de Dados).
+☁️ Infraestrutura protegida e monitorada.
+🙋 Você no controle: pode excluir sua conta a qualquer momento, direto pelo app.
+
+A gente pede só o necessário para resolver o problema da cidade — e trata cada dado com o respeito que ele merece. 💙
+
+Confiança se constrói com transparência. Nos dois lados.
+
+📲 Baixe na Google Play — @thevoxcidade`,
+    tags:"#VoxCidade #LGPD #Privacidade #SegurançaDeDados #ProteçãoDeDados #Confiança #CidadeInteligente #SuaCidadeSuaVoz" },
+
+  { n:11, cap:"Chamada final", tt:"Baixe agora",
+    legenda:`🚀 Ao longo dos últimos dias, mostramos como o VoxCidade nasceu para dar voz à sua cidade.
+Agora, chegou a SUA vez.
+
+Com o VoxCidade você:
+📸 Registra problemas urbanos em segundos
+📍 Envia com localização automática
+🔔 Acompanha cada etapa por um protocolo único
+🔒 Com seus dados protegidos e conformidade com a LGPD
+
+Tudo de graça. Tudo simples. Tudo transparente. 💙
+
+📲 Baixe agora na Google Play e comece a transformar o que te incomoda em ação.
+🏛️ Sua cidade ainda não participa? Marque a sua prefeitura nos comentários e ajude a levar o VoxCidade até ela.
+
+Porque toda cidade tem uma voz — e a sua acaba de ganhar um megafone. 🎙️
+
+🔗 voxcidade.com.br — @thevoxcidade`,
+    tags:"#VoxCidade #SuaCidadeSuaVoz #BaixeAgora #AppGratuito #Cidadania #CidadeInteligente #GovTech #Maringá #ParticipaçãoCidadã #GooglePlay" },
+];
+
+const pad = n => String(n).padStart(2,'0');
+const fmtName = { feed:'feed', stories:'stories', quadrado:'quadrado' };
+
+/* ── Monta a grade ── */
+const grid = document.getElementById('grid');
+POSTS.forEach((p,i)=>{
+  const btn = document.createElement('button');
+  btn.className = 'post-card';
+  btn.setAttribute('aria-label', `Post ${p.n}: ${p.tt}`);
+  btn.innerHTML =
+    `<span class="num">${p.n}</span>`+
+    `<img src="campanhas/feed/post-${pad(p.n)}.webp" alt="Post ${p.n} — ${p.tt}" loading="lazy" width="1080" height="1350">`+
+    `<span class="cap"><span class="ch">${p.cap}</span><span class="tt">${p.tt}</span></span>`;
+  btn.addEventListener('click',()=>openLb(i));
+  grid.appendChild(btn);
+});
+
+/* ── Lightbox ── */
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lbImg');
+const lbCh = document.getElementById('lbCh');
+const lbTitle = document.getElementById('lbTitle');
+const lbLegenda = document.getElementById('lbLegenda');
+const lbTags = document.getElementById('lbTags');
+const lbCopy = document.getElementById('lbCopy');
+const lbDownload = document.getElementById('lbDownload');
+const tabs = [...document.querySelectorAll('.lb-tab')];
+let cur = 0, curFmt = 'feed';
+
+function setFmt(fmt){
+  curFmt = fmt;
+  const p = POSTS[cur];
+  const src = `campanhas/${fmtName[fmt]}/post-${pad(p.n)}.webp`;
+  lbImg.src = src;
+  lbImg.alt = `Post ${p.n} — ${p.tt} (${fmt})`;
+  lbDownload.href = src;
+  lbDownload.setAttribute('download', `voxcidade-post-${pad(p.n)}-${fmt}.webp`);
+  tabs.forEach(t=>t.classList.toggle('active', t.dataset.fmt===fmt));
+}
+
+function render(){
+  const p = POSTS[cur];
+  lbCh.textContent = `Post ${p.n} · ${p.cap}`;
+  lbTitle.textContent = p.tt;
+  lbLegenda.textContent = p.legenda;
+  lbTags.textContent = p.tags;
+  lbCopy.textContent = '📋 Copiar legenda + hashtags';
+  setFmt('feed');
+  document.querySelector('.lb-body').scrollTop = 0;
+}
+
+function openLb(i){
+  cur = i;
+  render();
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb(){
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function step(d){
+  cur = (cur + d + POSTS.length) % POSTS.length;
+  render();
+}
+
+tabs.forEach(t=>t.addEventListener('click',()=>setFmt(t.dataset.fmt)));
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',()=>step(-1));
+document.getElementById('lbNext').addEventListener('click',()=>step(1));
+lb.addEventListener('click',e=>{ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') closeLb();
+  else if(e.key==='ArrowLeft') step(-1);
+  else if(e.key==='ArrowRight') step(1);
+});
+
+lbCopy.addEventListener('click',async()=>{
+  const p = POSTS[cur];
+  const txt = p.legenda + '\n\n' + p.tags;
+  try{
+    await navigator.clipboard.writeText(txt);
+    lbCopy.textContent = '✅ Copiado!';
+    setTimeout(()=>{ lbCopy.textContent = '📋 Copiar legenda + hashtags'; }, 2200);
+  }catch(err){
+    lbCopy.textContent = '⚠️ Copie manualmente';
+    setTimeout(()=>{ lbCopy.textContent = '📋 Copiar legenda + hashtags'; }, 2200);
+  }
+});
+</script>
+</body>
+</html>
