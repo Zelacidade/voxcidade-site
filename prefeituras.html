@@ -800,7 +800,7 @@
       <button class="rmm-city" data-slug="paicandu"><img src="rmm/brasoes/paicandu.webp" alt="Brasão de Paiçandu" width="44" height="44" loading="lazy"><b>Paiçandu</b><span>49.694 hab.</span></button>
       <button class="rmm-city" data-slug="sarandi"><img src="rmm/brasoes/sarandi.webp" alt="Brasão de Sarandi" width="44" height="44" loading="lazy"><b>Sarandi</b><span>130.211 hab.</span></button>
     </div>
-    <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 6 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
+    <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 8 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
   </div>
 </section>
 
@@ -824,7 +824,7 @@
       <button class="rmm-city" data-slug="piacatu"><img src="sp/brasoes/piacatu.webp" alt="Brasão de Piacatu" width="44" height="44" loading="lazy"><b>Piacatu</b><span>5.638 hab.</span></button>
       <button class="rmm-city" data-slug="santopolisdoaguapei"><img src="sp/brasoes/santopolisdoaguapei.webp" alt="Brasão de Santópolis do Aguapeí" width="44" height="44" loading="lazy"><b>Santópolis do Aguapeí</b><span>3.909 hab.</span></button>
     </div>
-    <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 6 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
+    <p class="rmm-note">Cada município tem uma <b>apresentação institucional de 8 páginas</b> com o brasão da cidade — em PDF, pronta para imprimir ou encaminhar. Materiais comuns (arte institucional e vídeo) também estão dentro de cada ficha.</p>
   </div>
 </section>
 
@@ -994,10 +994,10 @@
       const d = c.d || 'rmm';
       const pdf = d + '/folders/VoxCidade-Apresentacao-' + c.f + '.pdf';
       let pgs = '';
-      for (let i = 1; i <= 6; i++) {
+      for (let i = 1; i <= 8; i++) {
         const src = d + '/paginas/' + slug + '-p' + i + '.webp';
         pgs += '<button class="rmm-pg" data-full="' + src + '" title="Ampliar página ' + i + '" ' +
-               'data-legenda="Página ' + i + ' de 6 — apresentação para ' + c.n + '">' +
+               'data-legenda="Página ' + i + ' de 8 — apresentação para ' + c.n + '">' +
                '<img src="' + src + '" alt="Página ' + i + ' da apresentação para ' + c.n + '" loading="lazy"></button>';
       }
       return '' +
