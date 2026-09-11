@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1054A8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Implantação do Município — VoxCidade</title>
+  <meta name="description" content="Instruções de Implantação do Município: o passo a passo para colocar o VoxCidade em funcionamento na sua cidade, com os papéis de cada participante e as 7 fichas de coleta prontas para imprimir.">
+  <link rel="canonical" href="https://voxcidade.com.br/implantacao.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Implantação do Município — VoxCidade">
+  <meta property="og:description" content="O passo a passo para implantar o VoxCidade na sua cidade e as 7 fichas do Kit de Implantação, em PDF.">
+  <meta property="og:image" content="https://voxcidade.com.br/og-image.png">
+  <meta property="og:url" content="https://voxcidade.com.br/implantacao.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root {
+    --azul:#1054A8; --azul2:#1976D2; --azulbg:#E8F4FD;
+    --amarelo:#F5A800; --escuro:#0D1B2A; --cinza:#5A6A7A;
+    --claro:#F7FAFD; --branco:#FFFFFF;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--branco);color:var(--escuro);overflow-x:hidden}
+  section[id]{scroll-margin-top:84px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 2px 24px rgba(16,84,168,0.08)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+  .nav-logo img{width:42px;height:42px;object-fit:contain}
+  .nav-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:var(--azul);letter-spacing:-0.5px}
+  .nav-links{display:flex;gap:16px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--azul);font-weight:600;font-size:14px;white-space:nowrap;transition:color .2s}
+  .nav-links a:hover{color:var(--amarelo)}
+  .nav-cta{flex-shrink:0;background:var(--azul);color:#fff;border-radius:50px;padding:10px 24px;font-weight:600;font-size:14px;text-decoration:none;transition:background .2s,transform .2s}
+  .nav-cta:hover{background:var(--azul2);transform:translateY(-1px)}
+  .nav-burger{display:none;background:none;border:none;font-size:24px;line-height:1;color:var(--azul);cursor:pointer;padding:4px 8px}
+  .nav-so-mobile{display:none}
+  .page-hero{background:linear-gradient(135deg,#0D1B2A 0%,#1054A8 100%);padding:140px 48px 72px;text-align:center}
+  .page-hero .kicker{display:inline-block;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--amarelo);margin-bottom:14px}
+  .page-hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:14px}
+  .page-hero p{font-size:18px;line-height:1.6;color:rgba(255,255,255,0.62);max-width:680px;margin:0 auto}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ── botões ── */
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:50px;padding:13px 26px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:none;transition:background .2s,transform .2s,border-color .2s}
+  .btn.pri{background:var(--amarelo);color:var(--escuro)}
+  .btn.pri:hover{background:#FFBB24;transform:translateY(-2px)}
+  .btn.contorno{background:rgba(255,255,255,0.10);color:#fff;border:1.5px solid rgba(255,255,255,0.35)}
+  .btn.contorno:hover{background:rgba(255,255,255,0.18);border-color:var(--amarelo)}
+  .btn.azul{background:var(--azul);color:#fff}
+  .btn.azul:hover{background:var(--azul2);transform:translateY(-1px)}
+
+  /* ── seções ── */
+  .sec{padding:64px 0}
+  .sec.alt{background:var(--claro)}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 34px}
+  .sec-kicker{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul2)}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(26px,3.4vw,36px);color:var(--escuro);margin:8px 0 10px}
+  .sec-head p{font-size:16px;line-height:1.65;color:var(--cinza)}
+  .sec-head p a,.nota a,.lgpd a{color:var(--azul);font-weight:600}
+
+  /* ── documento ── */
+  .doc-card{display:grid;grid-template-columns:250px 1fr;gap:42px;align-items:center;background:#fff;border:1px solid var(--azulbg);border-radius:24px;padding:34px;box-shadow:0 18px 50px rgba(16,84,168,0.10)}
+  .doc-card img{display:block;width:100%;height:auto;aspect-ratio:210/297;border-radius:10px;box-shadow:0 12px 30px rgba(13,27,42,0.25)}
+  .doc-card h3{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(22px,2.6vw,28px);line-height:1.15;color:var(--escuro)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+  .chip{background:var(--azulbg);color:var(--azul);font-size:13px;font-weight:600;padding:5px 12px;border-radius:50px}
+  .doc-card p{font-size:15.5px;line-height:1.65;color:var(--cinza);margin-bottom:14px}
+  .lista-check{list-style:none;display:grid;gap:8px;margin-bottom:22px}
+  .lista-check li{position:relative;padding-left:26px;font-size:15px;line-height:1.5;color:#2b3a4a}
+  .lista-check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--amarelo);font-weight:700}
+
+  /* ── etapas ── */
+  .etapas{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:16px}
+  .etapa{background:#fff;border:1px solid var(--azulbg);border-radius:16px;padding:18px 18px 16px;box-shadow:0 6px 18px rgba(13,27,42,0.05)}
+  .etapa .n{width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;font-family:'Fraunces',serif;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+  .etapa.cond{border:1.5px dashed #FFB74D}
+  .etapa.cond .n{background:#E65100}
+  .etapa h4{font-size:16px;font-weight:600;color:var(--escuro);margin-bottom:5px}
+  .etapa p{font-size:14px;line-height:1.55;color:var(--cinza)}
+  .etapa .quem{display:block;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--azul2)}
+
+  /* ── papéis ── */
+  .papeis{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .papel{background:#fff;border:1px solid var(--azulbg);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+  .papel h4{font-family:'Fraunces',serif;font-weight:700;font-size:19px;color:var(--escuro)}
+  .papel .qtd{align-self:flex-start;background:#FFF4D6;color:#7A5200;font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:50px}
+  .papel .qtd.obr{background:#FDE7E7;color:#9B1C1C}
+  .papel p{font-size:14.5px;line-height:1.6;color:var(--cinza)}
+  .nota{text-align:center;font-size:14.5px;color:var(--cinza);margin-top:26px}
+
+  /* ── fichas ── */
+  .fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+  .ficha{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--azulbg);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(13,27,42,0.08);transition:transform .22s,box-shadow .22s}
+  .ficha:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(16,84,168,0.18)}
+  .ficha img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:top;border-bottom:1px solid var(--azulbg)}
+  .ficha .selo{position:absolute;top:12px;right:12px;background:var(--amarelo);color:var(--escuro);font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:50px;box-shadow:0 3px 10px rgba(0,0,0,0.18)}
+  .ficha-body{padding:16px 18px 6px;flex:1}
+  .ficha-body .num{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--azul2)}
+  .ficha-body h4{font-family:'Fraunces',serif;font-weight:700;font-size:18px;line-height:1.2;color:var(--escuro);margin:4px 0 8px}
+  .ficha-body p{font-size:13.5px;line-height:1.55;color:var(--cinza)}
+  .ficha-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 18px 18px}
+  .ficha-foot span{font-size:12.5px;color:var(--cinza)}
+  .ficha-foot a{flex-shrink:0;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;background:var(--azul);color:#fff;text-decoration:none;font-weight:600;font-size:13.5px;padding:8px 16px;border-radius:50px;transition:background .2s}
+  .ficha-foot a:hover{background:var(--azul2)}
+  .ficha-foot a:focus-visible,.btn:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+
+  /* ── antes de começar ── */
+  .prepara{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;max-width:900px;margin:0 auto}
+  .prepara li{list-style:none;position:relative;padding:14px 16px 14px 48px;background:#fff;border:1px solid var(--azulbg);border-radius:14px;font-size:15px;line-height:1.5;color:#2b3a4a}
+  .prepara li::before{content:"";position:absolute;left:16px;top:16px;width:18px;height:18px;border:2px solid var(--azul2);border-radius:5px}
+  .lgpd{max-width:900px;margin:28px auto 0;background:#FFF8E6;border:1px solid #F6D58A;border-radius:16px;padding:18px 22px;font-size:15px;line-height:1.6;color:#4A3A12}
+  .lgpd b{color:#3A2A00}
+  .alerta-mdp{max-width:900px;margin:18px auto 0;background:#FFF3F2;border:1px solid #F5C2C0;border-radius:16px;padding:18px 22px;font-size:15px;line-height:1.6;color:#5C1A1A}
+  .alerta-mdp b{color:#9B1C1C}
+
+  /* ── CTA final ── */
+  .cta-final{background:linear-gradient(135deg,#0D1B2A 0%,#1054A8 100%);text-align:center;padding:68px 24px}
+  .cta-final h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(28px,3.8vw,42px);color:#fff;margin-bottom:12px}
+  .cta-final p{font-size:17px;line-height:1.6;color:rgba(255,255,255,0.68);max-width:620px;margin:0 auto}
+
+  footer{background:var(--escuro);color:rgba(255,255,255,0.4);padding:48px;text-align:center}
+  .footer-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+  .footer-logo img{width:36px}
+  .footer-logo span{font-family:'Fraunces',serif;font-weight:900;font-size:20px;color:#fff}
+  .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;list-style:none}
+  .footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-links a:hover{color:var(--amarelo)}
+  .footer-copy{font-size:13px}
+  .footer-social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+  .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid rgba(255,255,255,0.35);border-radius:50%;color:rgba(255,255,255,0.55);transition:color .2s,border-color .2s,transform .2s}
+  .footer-social a:hover{color:var(--amarelo);border-color:var(--amarelo);transform:translateY(-2px)}
+  .footer-social svg{width:18px;height:18px;fill:currentColor}
+
+  @media(max-width:900px){
+    nav{padding:14px 24px}
+    .nav-burger{display:block}
+    .nav-cta{display:none}
+    .nav-so-mobile{display:block}
+    .nav-so-desktop{display:none}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:6px 24px 14px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,84,168,0.08);box-shadow:0 12px 24px rgba(16,84,168,0.1)}
+    .nav-links.open{display:flex}
+    .nav-links a{display:block;padding:11px 0;font-size:16px}
+  }
+  @media(max-width:768px){
+    .page-hero{padding:110px 24px 56px}
+    .sec{padding:48px 0}
+    .doc-card{grid-template-columns:1fr;gap:24px;padding:22px}
+    .doc-card img{max-width:220px;margin:0 auto}
+    .prepara{grid-template-columns:1fr}
+    footer{padding:40px 24px}
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      transition-delay: 0s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#como">Como funciona</a></li>
+    <li><a href="index.html#bene">Benefícios</a></li>
+    <li><a href="index.html#app">Conheça o app</a></li>
+    <li><a href="index.html#gami">Gamificação</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="prefeituras.html#rmm" title="Municípios Selecionados da Região Metropolitana de Maringá">RMM</a></li>
+    <li><a href="prefeituras.html#sp" title="Municípios Selecionados da Região Noroeste do Estado de São Paulo">SP</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual</a></li>
+    <li class="nav-so-desktop"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-desktop"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="implantacao.html">Implantação</a></li>
+    <li class="nav-so-mobile"><a href="campanhas.html">Campanhas</a></li>
+    <li class="nav-so-mobile"><a href="termos.html">Termos de Uso</a></li>
+    <li class="nav-so-mobile"><a href="privacidade.html">Política de Privacidade</a></li>
+    <li class="nav-so-mobile"><a href="sobre.html">Sobre o App</a></li>
+    <li class="nav-so-mobile"><a href="faq.html">FAQ</a></li>
+    <li class="nav-so-mobile"><a href="exclusao.html">Excluir conta</a></li>
+    <li class="nav-so-mobile"><a href="index.html#download">⬇ Baixar app</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Baixar app</a>
+  <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+</nav>
+
+<div class="page-hero">
+  <span class="kicker">Para prefeituras · Kit de Implantação</span>
+  <h1>Implantação do Município</h1>
+  <p>O passo a passo para colocar o VoxCidade em funcionamento na sua cidade: quem participa, o que reunir, a ordem de cada lançamento no aplicativo e as 7 fichas de coleta, prontas para imprimir.</p>
+  <div class="btns">
+    <a class="btn pri" href="implantacao/INSTRUCOES-DE-IMPLANTACAO-DO-MUNICIPIO.pdf" target="_blank" rel="noopener">⬇ Baixar as Instruções (PDF)</a>
+    <a class="btn contorno" href="#fichas">Ver as 7 fichas</a>
+  </div>
+</div>
+
+<!-- ── Documento completo ── -->
+<section class="sec" id="documento">
+  <div class="wrap">
+    <div class="doc-card">
+      <img src="implantacao/capa-instrucoes.webp" alt="Capa do documento Instruções de Implantação do Município" width="520" height="735" loading="lazy">
+      <div>
+        <span class="sec-kicker">Documento completo</span>
+        <h3>Instruções de Implantação do Município</h3>
+        <div class="chips">
+          <span class="chip">Versão 1.0</span>
+          <span class="chip"><span data-auto="paginas">30</span> páginas</span>
+          <span class="chip">11 etapas</span>
+          <span class="chip">7 fichas anexas</span>
+        </div>
+        <p>Um documento único para a prefeitura e para a equipe de implantação. Cada etapa traz quem executa, a ficha usada, onde fica no aplicativo, o resultado esperado e como conferir.</p>
+        <ul class="lista-check">
+          <li>Papéis, quantidades e a função de cada participante no aplicativo</li>
+          <li>Informações do município: brasão, cobertura, organograma e configurações</li>
+          <li>Passo a passo em 11 etapas, com conferência ao final de cada uma</li>
+          <li>Checklist de liberação, manutenção e proteção de dados</li>
+        </ul>
+        <a class="btn azul" href="implantacao/INSTRUCOES-DE-IMPLANTACAO-DO-MUNICIPIO.pdf" target="_blank" rel="noopener">⬇ Baixar PDF · <span data-auto="tamanho">3,2 MB</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Etapas ── -->
+<section class="sec alt" id="etapas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Passo a passo</span>
+      <h2>Da adesão à liberação em 11 etapas</h2>
+      <p>As etapas seguem uma ordem, porque várias dependem da anterior. O detalhe de cada uma está no documento.</p>
+    </div>
+    <div class="etapas">
+      <div class="etapa"><span class="n">1</span><h4>Adesão da prefeitura</h4><p>O(a) Prefeito(a) formaliza a decisão, indica os responsáveis e escolhe como o aplicativo vai funcionar.</p><span class="quem">Prefeitura · Ficha 07</span></div>
+      <div class="etapa"><span class="n">2</span><h4>Fichas</h4><p>O ponto focal distribui, orienta, recolhe e confere as fichas de cada participante.</p><span class="quem">Ponto focal · Fichas 01 a 06</span></div>
+      <div class="etapa"><span class="n">3</span><h4>Implantar o município</h4><p>O município sai do cadastro oficial do IBGE e passa a operar no aplicativo.</p><span class="quem">Equipe VoxCidade · Ficha 04</span></div>
+      <div class="etapa"><span class="n">4</span><h4>Liberar o Administrador</h4><p>O administrador cria a própria conta e a equipe a promove; ao entrar de novo, o painel aparece.</p><span class="quem">Administrador + equipe · Ficha 01</span></div>
+      <div class="etapa"><span class="n">5</span><h4>Contato do Município</h4><p>O encarregado de dados e o canal de atendimento passam a constar no Habeas Data entregue ao cidadão.</p><span class="quem">Equipe VoxCidade · Ficha 03</span></div>
+      <div class="etapa"><span class="n">6</span><h4>Organograma</h4><p>Cada uma das 29 categorias ganha secretaria, prazo e gravidade — ou aplica-se o modelo padrão.</p><span class="quem">Administrador · Ficha 05</span></div>
+      <div class="etapa"><span class="n">7</span><h4>Gestores</h4><p>O administrador cria a conta de cada gestor e distribui as categorias entre eles.</p><span class="quem">Administrador · Ficha 02</span></div>
+      <div class="etapa"><span class="n">8</span><h4>Configurações</h4><p>Envio aos gestores, notificações, mapa público e alertas, conforme a escolha da prefeitura.</p><span class="quem">Administrador · Ficha 04</span></div>
+      <div class="etapa cond"><span class="n">9</span><h4>Alarme Maria da Penha</h4><p>Só com plantão 24 horas e acordo com a força de segurança: unidades cadastradas e teste combinado.</p><span class="quem">Condicional · Ficha 06</span></div>
+      <div class="etapa"><span class="n">10</span><h4>Brasão no aplicativo</h4><p>O brasão entra na atualização seguinte do aplicativo; até lá, vale o logotipo do VoxCidade.</p><span class="quem">Equipe VoxCidade · Ficha 04</span></div>
+      <div class="etapa"><span class="n">11</span><h4>Conferência e liberação</h4><p>Checklist final: com tudo conferido, a prefeitura divulga o VoxCidade à população.</p><span class="quem">Todos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Papéis ── -->
+<section class="sec" id="papeis">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Quem participa</span>
+      <h2>Os papéis e as quantidades</h2>
+      <p>Cada participante tem uma função definida no aplicativo e uma ficha própria.</p>
+    </div>
+    <div class="papeis">
+      <div class="papel"><span class="qtd obr">1 · obrigatório</span><h4>Prefeito(a)</h4><p>Formaliza a adesão, designa os responsáveis e decide sobre organograma, mapa público, envio automático aos gestores e Alarme Maria da Penha.</p></div>
+      <div class="papel"><span class="qtd obr">1 · obrigatório</span><h4>Ponto focal da implantação</h4><p>Conduz o processo com a equipe VoxCidade: distribui, recolhe e confere as fichas e acompanha o checklist final.</p></div>
+      <div class="papel"><span class="qtd obr">mínimo 1 · recomendado 2</span><h4>Administrador do Município</h4><p>Conduz o aplicativo pelo Painel Administrativo: solicitações, gestores, organograma, configurações, avisos, pesquisas, Habeas Data e relatórios. Sem ele, o município não opera.</p></div>
+      <div class="papel"><span class="qtd obr">1 · obrigatório</span><h4>Encarregado(a) de dados</h4><p>Responde pelos dados pessoais tratados no município e aparece, com o canal de atendimento, no Habeas Data entregue ao cidadão.</p></div>
+      <div class="papel"><span class="qtd">1 por secretaria ou área</span><h4>Gestor de Secretaria</h4><p>Recebe as solicitações das suas categorias por WhatsApp e/ou e-mail, acompanha as Missões e dá ciência nos avisos no Painel do Gestor.</p></div>
+      <div class="papel"><span class="qtd">0 a 3 · se aderir</span><h4>Unidade de Segurança</h4><p>Recebe com sirene o Alarme Maria da Penha e registra o atendimento, visível a todos os destinatários.</p></div>
+    </div>
+    <p class="nota">Cidadãos, mulheres atendidas pelo Alarme Maria da Penha e pessoas de apoio fazem o próprio cadastro no aplicativo — não entram nas fichas.</p>
+  </div>
+</section>
+
+<!-- ── Fichas ── -->
+<section class="sec alt" id="fichas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Kit de Implantação</span>
+      <h2>As 7 fichas, prontas para imprimir</h2>
+      <p>Cada ficha, em PDF A4, explica a função do participante no aplicativo e o que será lançado. Os campos marcados com ● vão para o aplicativo exatamente como escritos. Comece pela Ficha 07.</p>
+    </div>
+    <div class="fichas">
+      <article class="ficha"><span class="selo">Comece por aqui</span><img src="implantacao/ficha-07.webp" alt="Prévia da Ficha 07" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 07</span><h4>Adesão e Designações da Prefeitura</h4><p>Decisões da prefeitura e quem responde por cada papel. Preenchida pelo(a) Prefeito(a).</p></div>
+        <div class="ficha-foot"><span>1 por município · 1 pág.</span><a href="implantacao/Ficha-07-Adesao-Prefeitura.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-01.webp" alt="Prévia da Ficha 01" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 01</span><h4>Administrador do Município</h4><p>Identificação, conta no aplicativo e termo de responsabilidade de quem conduz o painel.</p></div>
+        <div class="ficha-foot"><span>1 por pessoa · 1 pág.</span><a href="implantacao/Ficha-01-Administrador.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-02.webp" alt="Prévia da Ficha 02" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 02</span><h4>Gestor de Secretaria</h4><p>Dados do gestor e as categorias delegadas a ele entre as 29 do aplicativo.</p></div>
+        <div class="ficha-foot"><span>1 por pessoa · 1 pág.</span><a href="implantacao/Ficha-02-Gestor.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-03.webp" alt="Prévia da Ficha 03" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 03</span><h4>Contato do Município / Encarregado de Dados</h4><p>Quem responde pelos dados pessoais e o canal de atendimento ao cidadão.</p></div>
+        <div class="ficha-foot"><span>1 por município · 1 pág.</span><a href="implantacao/Ficha-03-Contato-Encarregado.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-04.webp" alt="Prévia da Ficha 04" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 04</span><h4>Dados do Município</h4><p>Identificação oficial, brasão, área de cobertura e as configurações escolhidas.</p></div>
+        <div class="ficha-foot"><span>1 por município · 2 págs.</span><a href="implantacao/Ficha-04-Dados-do-Municipio.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-05.webp" alt="Prévia da Ficha 05" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 05</span><h4>Organograma do Município</h4><p>Secretarias e o vínculo das 29 categorias, com a sugestão do modelo padrão.</p></div>
+        <div class="ficha-foot"><span>1 por município · 2 págs.</span><a href="implantacao/Ficha-05-Organograma.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+      <article class="ficha"><img src="implantacao/ficha-06.webp" alt="Prévia da Ficha 06" width="480" height="679" loading="lazy">
+        <div class="ficha-body"><span class="num">Ficha 06</span><h4>Unidade de Segurança — Maria da Penha</h4><p>Unidade de plantão que recebe o alarme, seus canais e o termo de sigilo.</p></div>
+        <div class="ficha-foot"><span>0 a 3 · 1 pág.</span><a href="implantacao/Ficha-06-Unidade-Seguranca.pdf" target="_blank" rel="noopener">⬇ PDF</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ── Antes de começar ── -->
+<section class="sec" id="antes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Antes de começar</span>
+      <h2>O que a prefeitura já pode ir preparando</h2>
+    </div>
+    <ul class="prepara">
+      <li>Indicar o ponto focal da implantação.</li>
+      <li>Definir administrador titular e substituto — e pedir que criem a conta no aplicativo.</li>
+      <li>Separar o brasão do município em alta resolução.</li>
+      <li>Levantar as secretarias existentes e quem responde por cada área.</li>
+      <li>Reservar e-mails institucionais para os gestores, que ainda não tenham conta no aplicativo.</li>
+      <li>Designar o(a) encarregado(a) de dados e o canal de atendimento ao cidadão.</li>
+      <li>Listar distritos e localidades a mais de 40 km da sede.</li>
+      <li>Avaliar a adesão ao Alarme Maria da Penha.</li>
+    </ul>
+    <div class="alerta-mdp"><b>Alarme Maria da Penha é promessa de socorro.</b> A adesão exige plantão 24 horas, acordo formal com a força de segurança que fará o atendimento e respaldo jurídico para o uso da localização. O VoxCidade encaminha o alerta — não substitui o 190.</div>
+    <div class="lgpd"><b>Proteção de dados:</b> as fichas pedem só o necessário — não pedem CPF, documentos nem senhas. A prefeitura é a controladora dos dados do município; guarde as fichas preenchidas com acesso restrito e envie as digitalizações apenas para <a href="mailto:contato@voxcidade.com.br">contato@voxcidade.com.br</a>.</div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-final">
+  <h2>Pronto para implantar?</h2>
+  <p>Envie a Ficha 07 preenchida e assinada para a equipe VoxCidade. A partir dela, combinamos com o ponto focal os próximos passos.</p>
+  <div class="btns">
+    <a class="btn pri" href="mailto:contato@voxcidade.com.br?subject=Implanta%C3%A7%C3%A3o%20do%20VoxCidade%20%E2%80%94%20Ficha%2007">✉ Enviar a Ficha 07</a>
+    <a class="btn contorno" href="prefeituras.html">Conheça a solução para prefeituras</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <img src="logo-transparente.png" alt="VoxCidade">
+    <span>VoxCidade</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="termos.html">Termos de Uso</a></li>
+    <li><a href="privacidade.html">Política de Privacidade</a></li>
+    <li><a href="convivencia.html">Manual de Boa Convivência</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+    <li><a href="prefeituras.html">Para prefeituras</a></li>
+    <li><a href="implantacao.html">Implantação</a></li>
+    <li><a href="campanhas.html">Campanhas</a></li>
+    <li><a href="INDICE-MANUAL.pdf" target="_blank">Manual (Índice)</a></li>
+    <li><a href="MANUAL-ADMIN-VOXCIDADE.pdf" target="_blank" title="PDF protegido — senha sob solicitação em contato@voxcidade.com.br">Manual completo 🔒</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="exclusao.html">Excluir conta</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61590583760565" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://x.com/thevoxcidade" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.flickr.com/photos/204753992@N08/" target="_blank" rel="noopener" aria-label="Flickr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.334 6.666C2.42 6.666 0 9.087 0 12c0 2.913 2.42 5.334 5.334 5.334 2.913 0 5.332-2.421 5.332-5.334 0-2.913-2.419-5.334-5.332-5.334zm13.332 0c-2.913 0-5.332 2.421-5.332 5.334 0 2.913 2.419 5.334 5.332 5.334C21.58 17.334 24 14.913 24 12c0-2.913-2.42-5.334-5.334-5.334z"/></svg></a>
+    <a href="https://www.linkedin.com/company/122743942/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://www.instagram.com/thevoxcidade/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    <a href="https://www.tiktok.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="https://www.youtube.com/@thevoxcidade" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://www.reddit.com/user/thevoxcidade" target="_blank" rel="noopener" aria-label="Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+  </div>
+  <p class="footer-copy">© 2026 VoxCidade. Todos os direitos reservados. — Sua cidade, sua voz. <span style="opacity:.7">Versão 1.0.185</span></p>
+</footer>
+
+<script>
+/* ── Menu hambúrguer (padrão do site) ── */
+document.getElementById('nav').style.position='relative';
+const burger=document.getElementById('burger');
+const navLinks=document.querySelector('.nav-links');
+burger.addEventListener('click',()=>{
+  const aberto=navLinks.classList.toggle('open');
+  burger.textContent=aberto?'✕':'☰';
+  burger.setAttribute('aria-expanded',aberto);
+  burger.setAttribute('aria-label',aberto?'Fechar menu':'Abrir menu');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  burger.textContent='☰';
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Abrir menu');
+}));
+</script>
+</body>
+</html>
